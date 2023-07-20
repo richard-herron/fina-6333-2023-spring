@@ -1,0 +1,1801 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Project 1 Solution &#8212; FINA 6333</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'project_01_solution';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Project 2" href="project_02.html" />
+    <link rel="prev" title="Project 1" href="project_01.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="_introduction.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/DMSB_100th_LogoMark_CMYK_Horiz.jpg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/DMSB_100th_LogoMark_CMYK_Horiz.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="_introduction.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lectures and Practice</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="mckinney_02_lecture.html">McKinney Chapter 2 - Python Language Basics, IPython, and Jupyter Notebooks</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_02_practice.html">McKinney Chapter 2 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_02_practice_03.html">McKinney Chapter 2 - Practice (Section 3, Monday 2:45 PM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_02_practice_04.html">McKinney Chapter 2 - Practice (Section 4, Wednesday 11:45 AM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_02_practice_02.html">McKinney Chapter 2 - Practice (Section 2, Wednesday 2:45 PM)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="mckinney_03_lecture.html">McKinney Chapter 3 - Built-In Data Structures, Functions, and Files</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_03_practice.html">McKinney Chapter 3 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_03_practice_04.html">McKinney Chapter 3 - Practice (Section 4, Wednesday 11:45 AM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_03_practice_02.html">McKinney Chapter 3 - Practice (Section 2, Wednesday 2:45 PM)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="mckinney_04_lecture.html">McKinney Chapter 4 - NumPy Basics: Arrays and Vectorized Computation</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_04_practice.html">McKinney Chapter 4 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_04_practice_03.html">McKinney Chapter 4 - Practice (Section 3, Monday 2:45 PM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_04_practice_04.html">McKinney Chapter 4 - Practice (Section 4, Wednesday 11:45 AM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_04_practice_02.html">McKinney Chapter 4 - Practice (Section 2, Wednesday 2:45 PM)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="mckinney_05_lecture.html">McKinney Chapter 5 - Getting Started with pandas</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_05_practice.html">McKinney Chapter 5 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_05_practice_03.html">McKinney Chapter 5 - Practice (Section 3, Monday 2:45 PM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_05_practice_04.html">McKinney Chapter 5 - Practice (Section 4, Wednesday 11:45 AM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_05_practice_02.html">McKinney Chapter 5 - Practice (Section 2, Wednesday 2:45 PM)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="herron_01_lecture.html">Herron Topic 1 - Web Data, Log and Simple Returns, and Portfolio Math</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="herron_01_practice.html">Herron Topic 1 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_01_practice_03.html">Herron Topic 1 - Practice (Section 3, Monday 2:45 PM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_01_practice_04.html">Herron Topic 1 - Practice (Section 4, Wednesday 11:45 AM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_01_practice_02.html">Herron Topic 1 - Practice (Section 2, Wednesday 2:45 PM)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="mckinney_08_lecture.html">McKinney Chapter 8 - Data Wrangling: Join, Combine, and Reshape</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_08_practice.html">McKinney Chapter 8 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_08_practice_03.html">McKinney Chapter 8 - Practice (Monday 2:45 PM, Section 3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_08_practice_04.html">McKinney Chapter 8 - Practice (Wednesday 11:45 AM, Section 4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_08_practice_02.html">McKinney Chapter 8 - Practice (Wednesday 2:45 PM, Section 2)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="mckinney_10_lecture.html">McKinney Chapter 10 - Data Aggregation and Group Operations</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_10_practice.html">McKinney Chapter 10 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_10_practice_all.html">McKinney Chapter 10 - Practice (All Sections)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="mckinney_11_lecture.html">McKinney Chapter 11 - Time Series</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_11_practice.html">McKinney Chapter 11 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_11_practice_03.html">McKinney Chapter 11 - Practice (Monday 2:45 PM, Section 3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_11_practice_04.html">McKinney Chapter 11 - Practice (Wednesday 11:45 AM, Section 4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_11_practice_02.html">McKinney Chapter 11 - Practice (Wednesday 2:45 PM, Section 2)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="herron_02_lecture.html">Herron Topic 2 - Trading Strategies</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="herron_02_practice.html">Herron Topic 2 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_02_practice_03.html">Herron Topic 2 - Practice (Monday 2:45 PM, Section 3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_02_practice_04.html">Herron Topic 2 - Practice (Monday 11:45 AM, Section 4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_02_practice_02.html">Herron Topic 2 - Practice (Wednesday 2:45 PM, Section 2)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="herron_03_lecture.html">Herron Topic 3 - Multifactor Models</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="herron_03_practice.html">Herron Topic 3 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_03_practice_03.html">Herron Topic 3 - Practice (Monday 2:45 PM, Section 3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_03_practice_04.html">Herron Topic 3 - Practice (Monday 11:45 AM, Section 4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_03_practice_02.html">Herron Topic 3 - Practice (Wednesday 2:45 PM, Section 2)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="herron_04_lecture.html">Herron Topic 4 - Portfolio Optimization</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="herron_04_practice.html">Herron Topic 4 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_04_practice_03.html">Herron Topic 4 - Practice (Monday 2:45 PM, Section 3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_04_practice_04.html">Herron Topic 4 - Practice (Wednesday 11:45 AM, Section 4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_04_practice_02.html">Herron Topic 4 - Practice (Wednesday 2:45 PM, Section 2)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="herron_05_lecture.html">Herron Topic 5 - Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="herron_05_practice.html">Herron Topic 5 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_05_practice_03.html">Herron Topic 5 - Practice (Monday 2:45 PM, Section 3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_05_practice_04.html">Herron Topic 5 - Practice (Wednesday 11:45 AM, Section 4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_05_practice_02.html">Herron Topic 5 - Practice (Wednesday 2:45 PM, Section 2)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="herron_06_lecture.html">Herron Topic 6 - Size, Value, and Momentum Investing</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="herron_06_practice.html">Herron Topic 6 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_06_practice_03.html">Herron Topic 6 - Practice (Monday 2:45 PM, Section 3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_06_practice_04.html">Herron Topic 6 - Practice (Wednesday 11:45 AM, Section 4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_06_practice_02.html">Herron Topic 6 - Practice (Wednesday 2:45 PM, Section 2)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="herron_07_lecture.html">Herron Topic 7 - Five Stylized Facts of Asset Returns</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="herron_07_practice.html">Herron Topic 7 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_07_practice_03.html">Herron Topic 7 - Practice (Monday 2:45 PM, Section 3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_07_practice_04.html">Herron Topic 7 - Practice (Wednesday 11:45 AM, Section 4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_07_practice_02.html">Herron Topic 7 - Practice (Wednesday 2:45 PM, Section 2)</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quizzes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="quiz_01.html">Quiz 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quiz_02.html">Quiz 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quiz_03.html">Quiz 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quiz_04.html">Quiz 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quiz_05.html">Quiz 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quiz_06.html">Quiz 6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quiz_07.html">Quiz 7</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Projects</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="project_01.html">Project 1</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Project 1 Solution</a></li>
+
+
+
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="project_02.html">Project 2</a></li>
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/project_01_solution.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Project 1 Solution</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Project 1 Solution</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose">Purpose</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tasks">Tasks</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#packages-and-settings">Packages and Settings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#single-stocks">Single Stocks</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1-do-mean-returns-in-year-t-predict-mean-returns-in-year-t-1">Task 1: Do mean returns in year $t$ predict mean returns in year $t+1$?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2-does-volatility-in-year-t-predict-volatility-in-year-t-1">Task 2: Does volatility in year $t$ predict volatility in year $t+1$?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3-do-sharpe-ratios-in-year-t-predict-sharpe-ratios-in-year-t-1">Task 3: Do Sharpe Ratios in year $t$ predict Sharpe Ratios in year $t+1$?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-4-do-capm-betas-in-year-t-predict-capm-betas-in-year-t-1">Task 4: Do CAPM betas in year $t$ predict CAPM betas in year $t+1$?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-5-does-volatility-in-year-t-predict-mean-returns-in-year-t-1">Task 5: Does volatility in year $t$ predict <em>mean returns</em> in year $t+1$?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-6-does-capm-beta-in-year-t-predict-mean-returns-in-year-t-1">Task 6: Does CAPM beta in year $t$ predict <em>mean returns</em> in year $t+1$?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#portfolios-i">Portfolios I</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-7-does-volatility-in-year-t-predict-mean-returns-in-year-t-1">Task 7: Does volatility in year $t$ predict <em>mean returns</em> in year $t+1$?</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-of-single-stocks-and-portfolios">Comparison of Single Stocks and Portfolios</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-8-does-capm-beta-in-year-t-predict-mean-returns-in-year-t-1">Task 8: Does CAPM beta in year $t$ predict <em>mean returns</em> in year $t+1$?</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Comparison of Single Stocks and Portfolios</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#portfolios-ii">Portfolios II</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-9-do-high-volatility-portfolios-have-high-mean-returns-and-sharpe-ratios">Task 9: Do high volatility portfolios have high mean returns and Sharpe Ratios?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discussion">Discussion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-10-discuss-and-explain-any-limitations-of-your-analysis-above">Task 10: Discuss and explain any limitations of your analysis above</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#criteria">Criteria</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="project-1-solution">
+<h1>Project 1 Solution<a class="headerlink" href="#project-1-solution" title="Permalink to this heading">#</a></h1>
+</section>
+<section id="purpose">
+<h1>Purpose<a class="headerlink" href="#purpose" title="Permalink to this heading">#</a></h1>
+<p>I have two goals for this project:</p>
+<ol class="arabic simple">
+<li><p>To help you master data manipulation and visualization</p></li>
+<li><p>To help you understand the risk-return tradeoff for several measures of risk</p></li>
+</ol>
+</section>
+<section id="tasks">
+<h1>Tasks<a class="headerlink" href="#tasks" title="Permalink to this heading">#</a></h1>
+<section id="packages-and-settings">
+<h2>Packages and Settings<a class="headerlink" href="#packages-and-settings" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">config</span> InlineBackend.figure_format = &#39;retina&#39;
+<span class="o">%</span><span class="k">precision</span> 4
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">float_format</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{:.4f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Permalink to this heading">#</a></h2>
+<p>I used the following code cell to download the data for this project.
+Leave this code cell commented out and use the CSV files I provided with this notebook.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import yfinance as yf</span>
+<span class="c1"># import pandas_datareader as pdr</span>
+<span class="c1"># import requests_cache</span>
+<span class="c1"># session = requests_cache.CachedSession(expire_after=1)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># wiki = pd.read_html(&#39;https://en.wikipedia.org/wiki/Russell_1000_Index&#39;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># (</span>
+<span class="c1">#     yf.Tickers(</span>
+<span class="c1">#         tickers=wiki[2][&#39;Ticker&#39;].str.replace(pat=&#39;.&#39;, repl=&#39;-&#39;, regex=False).to_list(),</span>
+<span class="c1">#         session=session</span>
+<span class="c1">#     )</span>
+<span class="c1">#     .history(period=&#39;max&#39;, auto_adjust=False)</span>
+<span class="c1">#     .assign(Date = lambda x: x.index.tz_localize(None))</span>
+<span class="c1">#     .set_index(&#39;Date&#39;)</span>
+<span class="c1">#     .rename_axis(columns=[&#39;Variable&#39;, &#39;Ticker&#39;])</span>
+<span class="c1">#     [&#39;Adj Close&#39;]</span>
+<span class="c1">#     .pct_change()</span>
+<span class="c1">#     .loc[&#39;1962&#39;:&#39;2022&#39;]</span>
+<span class="c1">#     .to_csv(&#39;returns.csv&#39;)</span>
+<span class="c1"># )</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># (</span>
+<span class="c1">#     pdr.DataReader(</span>
+<span class="c1">#         name=&#39;F-F_Research_Data_Factors_daily&#39;,</span>
+<span class="c1">#         data_source=&#39;famafrench&#39;,</span>
+<span class="c1">#         start=&#39;1900&#39;,</span>
+<span class="c1">#         session=session</span>
+<span class="c1">#     )</span>
+<span class="c1">#     [0]</span>
+<span class="c1">#     .rename_axis(columns=&#39;Variable&#39;)</span>
+<span class="c1">#     .div(100)</span>
+<span class="c1">#     .loc[&#39;1962&#39;:&#39;2022&#39;]</span>
+<span class="c1">#     .to_csv(&#39;ff.csv&#39;)</span>
+<span class="c1"># )</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Run the following code cell to read the data for this project.
+The <code class="docutils literal notranslate"><span class="pre">returns.csv</span></code> file contains daily returns for the Russell 1000 stocks from 1962 through 2022, and the <code class="docutils literal notranslate"><span class="pre">ff.csv</span></code> contains daily Fama and French factors from 1962 through 2022.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">returns</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;returns.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s1">&#39;Date&#39;</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ff</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;ff.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s1">&#39;Date&#39;</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="single-stocks">
+<h2>Single Stocks<a class="headerlink" href="#single-stocks" title="Permalink to this heading">#</a></h2>
+<p>For this section, use the single stock returns in <code class="docutils literal notranslate"><span class="pre">returns</span></code>.
+You may select years $t$ and $t+1$, but only use stocks with complete returns data for years $t$ and $t+1$.</p>
+<section id="task-1-do-mean-returns-in-year-t-predict-mean-returns-in-year-t-1">
+<h3>Task 1: Do mean returns in year $t$ predict mean returns in year $t+1$?<a class="headerlink" href="#task-1-do-mean-returns-in-year-t-predict-mean-returns-in-year-t-1" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">time</span> <span class="o">=</span> <span class="mi">2018</span>
+<span class="n">time</span><span class="p">,</span> <span class="n">timep1</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">time</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="n">time</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mean</span><span class="p">(</span><span class="n">ri</span><span class="p">,</span> <span class="n">ann</span><span class="o">=</span><span class="mi">252</span><span class="p">,</span> <span class="n">mul</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">mul</span> <span class="o">*</span> <span class="n">ann</span> <span class="o">*</span> <span class="n">ri</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">std</span><span class="p">(</span><span class="n">ri</span><span class="p">,</span> <span class="n">ann</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">252</span><span class="p">),</span> <span class="n">mul</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">mul</span> <span class="o">*</span> <span class="n">ann</span> <span class="o">*</span> <span class="n">ri</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sharpe</span><span class="p">(</span><span class="n">ri</span><span class="p">,</span> <span class="n">rf</span><span class="o">=</span><span class="n">ff</span><span class="p">[</span><span class="s1">&#39;RF&#39;</span><span class="p">],</span> <span class="n">ann</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">252</span><span class="p">)):</span>
+    <span class="n">ri_rf</span> <span class="o">=</span> <span class="n">ri</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">rf</span><span class="p">)</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">ann</span> <span class="o">*</span> <span class="n">ri_rf</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">/</span> <span class="n">ri_rf</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">beta</span><span class="p">(</span><span class="n">ri</span><span class="p">,</span> <span class="n">rf</span><span class="o">=</span><span class="n">ff</span><span class="p">[</span><span class="s1">&#39;RF&#39;</span><span class="p">],</span> <span class="n">rm_rf</span><span class="o">=</span><span class="n">ff</span><span class="p">[</span><span class="s1">&#39;Mkt-RF&#39;</span><span class="p">]):</span>
+    <span class="n">ri_rf</span> <span class="o">=</span> <span class="n">ri</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">rf</span><span class="p">)</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">ri_rf</span><span class="o">.</span><span class="n">cov</span><span class="p">(</span><span class="n">rm_rf</span><span class="p">)</span> <span class="o">/</span> <span class="n">rm_rf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ri_rf</span><span class="o">.</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">var</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">stats_all_ann</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="n">x</span>
+        <span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">rule</span><span class="o">=</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;period&#39;</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="n">mean</span><span class="p">,</span> <span class="n">std</span><span class="p">,</span> <span class="n">sharpe</span><span class="p">,</span> <span class="n">beta</span><span class="p">])</span>
+        <span class="o">.</span><span class="n">rename_axis</span><span class="p">([</span><span class="s1">&#39;Ticker&#39;</span><span class="p">,</span> <span class="s1">&#39;Statistic&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="s1">&#39;Ticker&#39;</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">unstack</span><span class="p">(</span><span class="s1">&#39;Date&#39;</span><span class="p">)</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="k">def</span> <span class="nf">scatter</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">scatter_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;alpha&#39;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">},</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">return</span> <span class="kc">None</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">stats_corr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">sub</span><span class="p">,</span> <span class="n">pct</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">pct</span> <span class="o">*</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+            <span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;rho&#39;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="n">x</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> 
+                <span class="n">x</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">n</span><span class="p">:</span><span class="o">-</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+            <span class="p">]},</span>
+            <span class="n">index</span><span class="o">=</span><span class="p">[</span>
+                <span class="sa">f</span><span class="s1">&#39;All Values&#39;</span><span class="p">,</span>
+                <span class="sa">f</span><span class="s1">&#39;Trim </span><span class="si">{</span><span class="n">pct</span><span class="si">}</span><span class="s1">% Outliers&#39;</span>
+            <span class="p">]</span>
+        <span class="p">)</span>
+        <span class="o">.</span><span class="n">rename_axis</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s1">&#39;Sample&#39;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;Statistic&#39;</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">set_caption</span><span class="p">(</span><span class="n">sub</span><span class="p">)</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_1</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">returns</span>
+    <span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">time</span><span class="p">:</span><span class="n">timep1</span><span class="p">]</span>
+    <span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">stats_all_ann</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_1</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+
+    .dataframe thead tr:last-of-type th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th>Statistic</th>
+      <th colspan="2" halign="left">beta</th>
+      <th colspan="2" halign="left">mean</th>
+      <th colspan="2" halign="left">sharpe</th>
+      <th colspan="2" halign="left">std</th>
+    </tr>
+    <tr>
+      <th>Date</th>
+      <th>2018</th>
+      <th>2019</th>
+      <th>2018</th>
+      <th>2019</th>
+      <th>2018</th>
+      <th>2019</th>
+      <th>2018</th>
+      <th>2019</th>
+    </tr>
+    <tr>
+      <th>Ticker</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>A</th>
+      <td>1.0995</td>
+      <td>1.2094</td>
+      <td>5.3336</td>
+      <td>27.3691</td>
+      <td>0.1305</td>
+      <td>1.0312</td>
+      <td>27.0755</td>
+      <td>24.4681</td>
+    </tr>
+    <tr>
+      <th>AA</th>
+      <td>1.2903</td>
+      <td>1.7639</td>
+      <td>-60.6016</td>
+      <td>-13.4767</td>
+      <td>-1.3938</td>
+      <td>-0.3970</td>
+      <td>44.7694</td>
+      <td>39.3309</td>
+    </tr>
+    <tr>
+      <th>AAL</th>
+      <td>1.3264</td>
+      <td>1.5513</td>
+      <td>-39.4041</td>
+      <td>-3.7435</td>
+      <td>-1.0287</td>
+      <td>-0.1655</td>
+      <td>40.0530</td>
+      <td>35.5337</td>
+    </tr>
+    <tr>
+      <th>AAP</th>
+      <td>0.8528</td>
+      <td>0.6426</td>
+      <td>51.1971</td>
+      <td>5.3710</td>
+      <td>1.5344</td>
+      <td>0.1220</td>
+      <td>32.1921</td>
+      <td>26.5124</td>
+    </tr>
+    <tr>
+      <th>AAPL</th>
+      <td>1.2410</td>
+      <td>1.4751</td>
+      <td>-1.4430</td>
+      <td>67.1478</td>
+      <td>-0.1128</td>
+      <td>2.4871</td>
+      <td>28.7421</td>
+      <td>26.1383</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_1</span><span class="p">[</span><span class="s1">&#39;mean&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">scatter</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">time</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">timep1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Ann. Mean of Daily Returns (%) for </span><span class="si">{</span><span class="n">time</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Ann. Mean of Daily Returns (%) for </span><span class="si">{</span><span class="n">timep1</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Return Predictability for Russell 1000 Stocks&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/30c30daf910fac43b106df83e10b554fde67f1d93e91fc833d9bec5dde2465b2.png" src="_images/30c30daf910fac43b106df83e10b554fde67f1d93e91fc833d9bec5dde2465b2.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_1</span><span class="p">[</span><span class="s1">&#39;mean&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span>
+    <span class="n">stats_corr</span><span class="p">,</span> 
+    <span class="n">sub</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Ann. Means of Daily Returns (%) for </span><span class="si">{</span><span class="n">time</span><span class="si">}</span><span class="s1"> and </span><span class="si">{</span><span class="n">timep1</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+</style>
+<table id="T_d17a2">
+  <caption>Ann. Means of Daily Returns (%) for 2018 and 2019</caption>
+  <thead>
+    <tr>
+      <th class="index_name level0" >Statistic</th>
+      <th id="T_d17a2_level0_col0" class="col_heading level0 col0" >rho</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >Sample</th>
+      <th class="blank col0" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_d17a2_level0_row0" class="row_heading level0 row0" >All Values</th>
+      <td id="T_d17a2_row0_col0" class="data row0 col0" >0.098793</td>
+    </tr>
+    <tr>
+      <th id="T_d17a2_level0_row1" class="row_heading level0 row1" >Trim 5% Outliers</th>
+      <td id="T_d17a2_row1_col0" class="data row1 col0" >-0.057586</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+</section>
+<section id="task-2-does-volatility-in-year-t-predict-volatility-in-year-t-1">
+<h3>Task 2: Does volatility in year $t$ predict volatility in year $t+1$?<a class="headerlink" href="#task-2-does-volatility-in-year-t-predict-volatility-in-year-t-1" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_1</span><span class="p">[</span><span class="s1">&#39;std&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">scatter</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">time</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">timep1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Ann. Vol. of Daily Returns (%) for </span><span class="si">{</span><span class="n">time</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Ann. Vol. of Daily Returns (%) for </span><span class="si">{</span><span class="n">timep1</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Volatility Predictability for Russell 1000 Stocks&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/334211fe16f96af2c93a1a01a48f1972c13a1b91839d07b70f2f98bf30f7b358.png" src="_images/334211fe16f96af2c93a1a01a48f1972c13a1b91839d07b70f2f98bf30f7b358.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_1</span><span class="p">[</span><span class="s1">&#39;std&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span>
+    <span class="n">stats_corr</span><span class="p">,</span>
+    <span class="n">sub</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Ann. Vol. of Daily Returns (%) for </span><span class="si">{</span><span class="n">time</span><span class="si">}</span><span class="s1"> and </span><span class="si">{</span><span class="n">timep1</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+</style>
+<table id="T_e3946">
+  <caption>Ann. Vol. of Daily Returns (%) for 2018 and 2019</caption>
+  <thead>
+    <tr>
+      <th class="index_name level0" >Statistic</th>
+      <th id="T_e3946_level0_col0" class="col_heading level0 col0" >rho</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >Sample</th>
+      <th class="blank col0" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_e3946_level0_row0" class="row_heading level0 row0" >All Values</th>
+      <td id="T_e3946_row0_col0" class="data row0 col0" >0.844335</td>
+    </tr>
+    <tr>
+      <th id="T_e3946_level0_row1" class="row_heading level0 row1" >Trim 5% Outliers</th>
+      <td id="T_e3946_row1_col0" class="data row1 col0" >0.792912</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+</section>
+<section id="task-3-do-sharpe-ratios-in-year-t-predict-sharpe-ratios-in-year-t-1">
+<h3>Task 3: Do Sharpe Ratios in year $t$ predict Sharpe Ratios in year $t+1$?<a class="headerlink" href="#task-3-do-sharpe-ratios-in-year-t-predict-sharpe-ratios-in-year-t-1" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_1</span><span class="p">[</span><span class="s1">&#39;sharpe&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">scatter</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">time</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">timep1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Sharpe Ratios of Daily Returns for </span><span class="si">{</span><span class="n">time</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Sharpe Ratios of Daily Returns for </span><span class="si">{</span><span class="n">timep1</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Sharpe Ratio Predictability for Russell 1000 Stocks&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/e3dc9052925f43561886a55396ac67bbe6c012b3e8a8169e53ac4dc7cfbd7cec.png" src="_images/e3dc9052925f43561886a55396ac67bbe6c012b3e8a8169e53ac4dc7cfbd7cec.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_1</span><span class="p">[</span><span class="s1">&#39;sharpe&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span>
+    <span class="n">stats_corr</span><span class="p">,</span> 
+    <span class="n">sub</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Sharpe Ratios of Daily Returns for </span><span class="si">{</span><span class="n">time</span><span class="si">}</span><span class="s1"> and </span><span class="si">{</span><span class="n">timep1</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+</style>
+<table id="T_f5830">
+  <caption>Sharpe Ratios of Daily Returns for 2018 and 2019</caption>
+  <thead>
+    <tr>
+      <th class="index_name level0" >Statistic</th>
+      <th id="T_f5830_level0_col0" class="col_heading level0 col0" >rho</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >Sample</th>
+      <th class="blank col0" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_f5830_level0_row0" class="row_heading level0 row0" >All Values</th>
+      <td id="T_f5830_row0_col0" class="data row0 col0" >0.027713</td>
+    </tr>
+    <tr>
+      <th id="T_f5830_level0_row1" class="row_heading level0 row1" >Trim 5% Outliers</th>
+      <td id="T_f5830_row1_col0" class="data row1 col0" >0.042822</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+</section>
+<section id="task-4-do-capm-betas-in-year-t-predict-capm-betas-in-year-t-1">
+<h3>Task 4: Do CAPM betas in year $t$ predict CAPM betas in year $t+1$?<a class="headerlink" href="#task-4-do-capm-betas-in-year-t-predict-capm-betas-in-year-t-1" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_1</span><span class="p">[</span><span class="s1">&#39;beta&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">scatter</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">time</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">timep1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Beta of Daily Returns for </span><span class="si">{</span><span class="n">time</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Beta of Daily Returns for </span><span class="si">{</span><span class="n">timep1</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Beta Predictability for Russell 1000 Stocks&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/d2a2b7cd58b52766b7602be32ab3f9c97e0047ffa20d782aff6acc954085d755.png" src="_images/d2a2b7cd58b52766b7602be32ab3f9c97e0047ffa20d782aff6acc954085d755.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_1</span><span class="p">[</span><span class="s1">&#39;beta&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span>
+    <span class="n">stats_corr</span><span class="p">,</span> 
+    <span class="n">sub</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Betas of Daily Returns for </span><span class="si">{</span><span class="n">time</span><span class="si">}</span><span class="s1"> and </span><span class="si">{</span><span class="n">timep1</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+</style>
+<table id="T_9a66e">
+  <caption>Betas of Daily Returns for 2018 and 2019</caption>
+  <thead>
+    <tr>
+      <th class="index_name level0" >Statistic</th>
+      <th id="T_9a66e_level0_col0" class="col_heading level0 col0" >rho</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >Sample</th>
+      <th class="blank col0" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_9a66e_level0_row0" class="row_heading level0 row0" >All Values</th>
+      <td id="T_9a66e_row0_col0" class="data row0 col0" >0.840941</td>
+    </tr>
+    <tr>
+      <th id="T_9a66e_level0_row1" class="row_heading level0 row1" >Trim 5% Outliers</th>
+      <td id="T_9a66e_row1_col0" class="data row1 col0" >0.800896</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+</section>
+<section id="task-5-does-volatility-in-year-t-predict-mean-returns-in-year-t-1">
+<h3>Task 5: Does volatility in year $t$ predict <em>mean returns</em> in year $t+1$?<a class="headerlink" href="#task-5-does-volatility-in-year-t-predict-mean-returns-in-year-t-1" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">df_1</span>
+    <span class="p">[[(</span><span class="s1">&#39;std&#39;</span><span class="p">,</span> <span class="n">time</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="n">timep1</span><span class="p">)]]</span>
+    <span class="o">.</span><span class="n">droplevel</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">scatter</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">time</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">timep1</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Ann. Vol. of Daily Returns (%) for </span><span class="si">{</span><span class="n">time</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Ann. Mean of Daily Returns (%) for </span><span class="si">{</span><span class="n">timep1</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Return Predictability for Russell 1000 Stocks&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/80612ca9a10798dc7f14f64e7f71af4b7fa050571db15f078fbc1409babd764d.png" src="_images/80612ca9a10798dc7f14f64e7f71af4b7fa050571db15f078fbc1409babd764d.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">df_1</span>
+    <span class="p">[[(</span><span class="s1">&#39;std&#39;</span><span class="p">,</span> <span class="n">time</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="n">timep1</span><span class="p">)]]</span>
+    <span class="o">.</span><span class="n">droplevel</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">pipe</span><span class="p">(</span>
+        <span class="n">stats_corr</span><span class="p">,</span> 
+        <span class="n">sub</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Ann. Mean of Daily Returns (%) for </span><span class="si">{</span><span class="n">time</span><span class="si">}</span><span class="s1"> and Ann. Vol. of Daily Returns (%) for </span><span class="si">{</span><span class="n">timep1</span><span class="si">}</span><span class="s1">&#39;</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+</style>
+<table id="T_e376c">
+  <caption>Ann. Mean of Daily Returns (%) for 2018 and Ann. Vol. of Daily Returns (%) for 2019</caption>
+  <thead>
+    <tr>
+      <th class="index_name level0" >Statistic</th>
+      <th id="T_e376c_level0_col0" class="col_heading level0 col0" >rho</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >Sample</th>
+      <th class="blank col0" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_e376c_level0_row0" class="row_heading level0 row0" >All Values</th>
+      <td id="T_e376c_row0_col0" class="data row0 col0" >0.235243</td>
+    </tr>
+    <tr>
+      <th id="T_e376c_level0_row1" class="row_heading level0 row1" >Trim 5% Outliers</th>
+      <td id="T_e376c_row1_col0" class="data row1 col0" >0.119379</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+</section>
+<section id="task-6-does-capm-beta-in-year-t-predict-mean-returns-in-year-t-1">
+<h3>Task 6: Does CAPM beta in year $t$ predict <em>mean returns</em> in year $t+1$?<a class="headerlink" href="#task-6-does-capm-beta-in-year-t-predict-mean-returns-in-year-t-1" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">df_1</span>
+    <span class="p">[[(</span><span class="s1">&#39;beta&#39;</span><span class="p">,</span> <span class="n">time</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="n">timep1</span><span class="p">)]]</span>
+    <span class="o">.</span><span class="n">droplevel</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">scatter</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">time</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">timep1</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Beta of Daily Returns for </span><span class="si">{</span><span class="n">time</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Ann. Mean of Daily Returns (%) for </span><span class="si">{</span><span class="n">timep1</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Return Predictability for Russell 1000 Stocks&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/69919ea015c56e799bc9699a480a419dae146a583f0bb03b3eb7428b00dcb819.png" src="_images/69919ea015c56e799bc9699a480a419dae146a583f0bb03b3eb7428b00dcb819.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">df_1</span>
+    <span class="p">[[(</span><span class="s1">&#39;beta&#39;</span><span class="p">,</span> <span class="n">time</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="n">timep1</span><span class="p">)]]</span>
+    <span class="o">.</span><span class="n">droplevel</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">pipe</span><span class="p">(</span>
+        <span class="n">stats_corr</span><span class="p">,</span> 
+        <span class="n">sub</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Ann. Mean of Daily Returns (%) for </span><span class="si">{</span><span class="n">time</span><span class="si">}</span><span class="s1"> and Beta of Daily Returns for </span><span class="si">{</span><span class="n">timep1</span><span class="si">}</span><span class="s1">&#39;</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+</style>
+<table id="T_4794e">
+  <caption>Ann. Mean of Daily Returns (%) for 2018 and Beta of Daily Returns for 2019</caption>
+  <thead>
+    <tr>
+      <th class="index_name level0" >Statistic</th>
+      <th id="T_4794e_level0_col0" class="col_heading level0 col0" >rho</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >Sample</th>
+      <th class="blank col0" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_4794e_level0_row0" class="row_heading level0 row0" >All Values</th>
+      <td id="T_4794e_row0_col0" class="data row0 col0" >0.213337</td>
+    </tr>
+    <tr>
+      <th id="T_4794e_level0_row1" class="row_heading level0 row1" >Trim 5% Outliers</th>
+      <td id="T_4794e_row1_col0" class="data row1 col0" >0.138294</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+</section>
+</section>
+<section id="portfolios-i">
+<h2>Portfolios I<a class="headerlink" href="#portfolios-i" title="Permalink to this heading">#</a></h2>
+<p>For this section, create 100 random portfolios of 50 stocks each from the daily returns in <code class="docutils literal notranslate"><span class="pre">returns</span></code>.
+Equally weight these portfolios and rebalance them daily.
+Use the same stocks and years $t$ and $t+1$ as the previous section.</p>
+<section id="task-7-does-volatility-in-year-t-predict-mean-returns-in-year-t-1">
+<h3>Task 7: Does volatility in year $t$ predict <em>mean returns</em> in year $t+1$?<a class="headerlink" href="#task-7-does-volatility-in-year-t-predict-mean-returns-in-year-t-1" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_stocks</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">n_ports</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="n">df_2</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span>
+        <span class="p">[</span>
+            <span class="n">returns</span>
+            <span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">time</span><span class="p">:</span><span class="n">timep1</span><span class="p">]</span>
+            <span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+            <span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">n_stocks</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">i</span><span class="p">)</span>
+            <span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> 
+            <span class="k">for</span> <span class="n">i</span> 
+            <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_ports</span><span class="p">)</span>
+        <span class="p">],</span> 
+        <span class="n">axis</span><span class="o">=</span><span class="mi">1</span>
+    <span class="p">)</span>
+    <span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">stats_all_ann</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">df_2</span>
+    <span class="p">[[(</span><span class="s1">&#39;std&#39;</span><span class="p">,</span> <span class="n">time</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="n">timep1</span><span class="p">)]]</span>
+    <span class="o">.</span><span class="n">droplevel</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">scatter</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">time</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">timep1</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Ann. Vol. of Daily Returns (%) for </span><span class="si">{</span><span class="n">time</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Ann. Mean of Daily Returns (%) for </span><span class="si">{</span><span class="n">timep1</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Return Predictability for Russell 1000 Stocks</span><span class="se">\n</span><span class="si">{</span><span class="n">n_ports</span><span class="si">}</span><span class="s1"> Random Portfolios of </span><span class="si">{</span><span class="n">n_stocks</span><span class="si">}</span><span class="s1"> Each&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/573cc03f0d0adb79613f05982c26fcdf13c9cb89357ce1216dd77d518097a36b.png" src="_images/573cc03f0d0adb79613f05982c26fcdf13c9cb89357ce1216dd77d518097a36b.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">df_2</span>
+    <span class="p">[[(</span><span class="s1">&#39;std&#39;</span><span class="p">,</span> <span class="n">time</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="n">timep1</span><span class="p">)]]</span>
+    <span class="o">.</span><span class="n">droplevel</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">pipe</span><span class="p">(</span>
+        <span class="n">stats_corr</span><span class="p">,</span> 
+        <span class="n">sub</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Ann. Mean of Daily Returns (%) for </span><span class="si">{</span><span class="n">time</span><span class="si">}</span><span class="s1"> and Ann. Vol. of Daily Returns (%) for </span><span class="si">{</span><span class="n">timep1</span><span class="si">}</span><span class="s1">&#39;</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+</style>
+<table id="T_c6ede">
+  <caption>Ann. Mean of Daily Returns (%) for 2018 and Ann. Vol. of Daily Returns (%) for 2019</caption>
+  <thead>
+    <tr>
+      <th class="index_name level0" >Statistic</th>
+      <th id="T_c6ede_level0_col0" class="col_heading level0 col0" >rho</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >Sample</th>
+      <th class="blank col0" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_c6ede_level0_row0" class="row_heading level0 row0" >All Values</th>
+      <td id="T_c6ede_row0_col0" class="data row0 col0" >0.049628</td>
+    </tr>
+    <tr>
+      <th id="T_c6ede_level0_row1" class="row_heading level0 row1" >Trim 5% Outliers</th>
+      <td id="T_c6ede_row1_col0" class="data row1 col0" >0.105950</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<section id="comparison-of-single-stocks-and-portfolios">
+<h4>Comparison of Single Stocks and Portfolios<a class="headerlink" href="#comparison-of-single-stocks-and-portfolios" title="Permalink to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df_1</span><span class="p">[[(</span><span class="s1">&#39;std&#39;</span><span class="p">,</span> <span class="n">time</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="n">timep1</span><span class="p">)]]</span><span class="o">.</span><span class="n">droplevel</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">scatter</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">time</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">timep1</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Single Stocks&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Ann. Vol. of Daily Returns (%) for </span><span class="si">{</span><span class="n">time</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Ann. Mean of</span><span class="se">\n</span><span class="s1"> Daily Returns (%)</span><span class="se">\n</span><span class="s1"> for </span><span class="si">{</span><span class="n">timep1</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">df_2</span><span class="p">[[(</span><span class="s1">&#39;std&#39;</span><span class="p">,</span> <span class="n">time</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="n">timep1</span><span class="p">)]]</span><span class="o">.</span><span class="n">droplevel</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">scatter</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">time</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">timep1</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">n_ports</span><span class="si">}</span><span class="s1"> Portfolios of </span><span class="si">{</span><span class="n">n_stocks</span><span class="si">}</span><span class="s1"> Each&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;Return Predictability for Russell 1000 Stocks&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Ann. Vol. of Daily Returns (%) for </span><span class="si">{</span><span class="n">time</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Ann. Mean of</span><span class="se">\n</span><span class="s1"> Daily Returns (%)</span><span class="se">\n</span><span class="s1"> for </span><span class="si">{</span><span class="n">timep1</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/934e9f1d711fa77c55dbb84c8cf3cf387177d54acf9e77d7110feb16fdb1a8a2.png" src="_images/934e9f1d711fa77c55dbb84c8cf3cf387177d54acf9e77d7110feb16fdb1a8a2.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="task-8-does-capm-beta-in-year-t-predict-mean-returns-in-year-t-1">
+<h3>Task 8: Does CAPM beta in year $t$ predict <em>mean returns</em> in year $t+1$?<a class="headerlink" href="#task-8-does-capm-beta-in-year-t-predict-mean-returns-in-year-t-1" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">df_2</span>
+    <span class="p">[[(</span><span class="s1">&#39;beta&#39;</span><span class="p">,</span> <span class="n">time</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="n">timep1</span><span class="p">)]]</span>
+    <span class="o">.</span><span class="n">droplevel</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">scatter</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">time</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">timep1</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Beta of Daily Returns for </span><span class="si">{</span><span class="n">time</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Ann. Mean of Daily Returns (%) for </span><span class="si">{</span><span class="n">timep1</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Return Predictability for Russell 1000 Stocks</span><span class="se">\n</span><span class="si">{</span><span class="n">n_ports</span><span class="si">}</span><span class="s1"> Random Portfolios of </span><span class="si">{</span><span class="n">n_stocks</span><span class="si">}</span><span class="s1"> Each&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/22203be4a07e24718f24fd49bbdf15058a9a5f5e4a3a23ade12389af335898ef.png" src="_images/22203be4a07e24718f24fd49bbdf15058a9a5f5e4a3a23ade12389af335898ef.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">df_2</span>
+    <span class="p">[[(</span><span class="s1">&#39;beta&#39;</span><span class="p">,</span> <span class="n">time</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="n">timep1</span><span class="p">)]]</span>
+    <span class="o">.</span><span class="n">droplevel</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">pipe</span><span class="p">(</span>
+        <span class="n">stats_corr</span><span class="p">,</span> 
+        <span class="n">sub</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Ann. Means of Daily Returns (%) for </span><span class="si">{</span><span class="n">timep1</span><span class="si">}</span><span class="s1"> and Beta of Daily Returns for </span><span class="si">{</span><span class="n">time</span><span class="si">}</span><span class="s1">&#39;</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+</style>
+<table id="T_13355">
+  <caption>Ann. Means of Daily Returns (%) for 2019 and Beta of Daily Returns for 2018</caption>
+  <thead>
+    <tr>
+      <th class="index_name level0" >Statistic</th>
+      <th id="T_13355_level0_col0" class="col_heading level0 col0" >rho</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >Sample</th>
+      <th class="blank col0" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_13355_level0_row0" class="row_heading level0 row0" >All Values</th>
+      <td id="T_13355_row0_col0" class="data row0 col0" >0.030935</td>
+    </tr>
+    <tr>
+      <th id="T_13355_level0_row1" class="row_heading level0 row1" >Trim 5% Outliers</th>
+      <td id="T_13355_row1_col0" class="data row1 col0" >0.049911</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<section id="id1">
+<h4>Comparison of Single Stocks and Portfolios<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df_1</span><span class="p">[[(</span><span class="s1">&#39;beta&#39;</span><span class="p">,</span> <span class="n">time</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="n">timep1</span><span class="p">)]]</span><span class="o">.</span><span class="n">droplevel</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">scatter</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">time</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">timep1</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Single Stocks&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Beta of Daily Returns (%) for </span><span class="si">{</span><span class="n">time</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Ann. Mean of</span><span class="se">\n</span><span class="s1"> Daily Returns (%)</span><span class="se">\n</span><span class="s1"> for </span><span class="si">{</span><span class="n">timep1</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">df_2</span><span class="p">[[(</span><span class="s1">&#39;beta&#39;</span><span class="p">,</span> <span class="n">time</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="n">timep1</span><span class="p">)]]</span><span class="o">.</span><span class="n">droplevel</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">scatter</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">time</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">timep1</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">n_ports</span><span class="si">}</span><span class="s1"> Portfolios of </span><span class="si">{</span><span class="n">n_stocks</span><span class="si">}</span><span class="s1"> Each&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;Return Predictability for Russell 1000 Stocks&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Beta of Daily Returns (%) for </span><span class="si">{</span><span class="n">time</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Ann. Mean of</span><span class="se">\n</span><span class="s1"> Daily Returns (%)</span><span class="se">\n</span><span class="s1"> for </span><span class="si">{</span><span class="n">timep1</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/6865e2c806fa782497cce539b1c0e31c90a652d5068966c826743b8b8d650b3f.png" src="_images/6865e2c806fa782497cce539b1c0e31c90a652d5068966c826743b8b8d650b3f.png" />
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="portfolios-ii">
+<h2>Portfolios II<a class="headerlink" href="#portfolios-ii" title="Permalink to this heading">#</a></h2>
+<p>Calculate monthly volatility and total return for <em>every stock</em> and <em>every month</em> in <code class="docutils literal notranslate"><span class="pre">returns</span></code>.
+Drop stock-months with fewer than 15 returns.
+Each month, assign these stocks to one of five portfolios based on their volatility during the previous month.
+Equally weight these portfolios and rebalance them monthly.</p>
+<section id="task-9-do-high-volatility-portfolios-have-high-mean-returns-and-sharpe-ratios">
+<h3>Task 9: Do high volatility portfolios have high mean returns and Sharpe Ratios?<a class="headerlink" href="#task-9-do-high-volatility-portfolios-have-high-mean-returns-and-sharpe-ratios" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_3</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span>
+        <span class="p">[</span>
+            <span class="n">returns</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;period&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">std</span><span class="p">()</span><span class="o">.</span><span class="n">shift</span><span class="p">(),</span>
+            <span class="n">returns</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;period&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">shift</span><span class="p">(),</span>
+            <span class="n">returns</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;period&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">prod</span><span class="p">()</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
+            <span class="n">returns</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;period&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+        <span class="p">],</span> 
+        <span class="n">keys</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;std_lag&#39;</span><span class="p">,</span> <span class="s1">&#39;count_lag&#39;</span><span class="p">,</span> <span class="s1">&#39;ret&#39;</span><span class="p">,</span> <span class="s1">&#39;count&#39;</span><span class="p">],</span> 
+        <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Variable&#39;</span><span class="p">,</span> <span class="s1">&#39;Ticker&#39;</span><span class="p">],</span> 
+        <span class="n">axis</span><span class="o">=</span><span class="mi">1</span>
+    <span class="p">)</span>
+    <span class="o">.</span><span class="n">stack</span><span class="p">()</span>
+    <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;(count_lag &gt;= 15) &amp; (count &gt;= 15)&#39;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Portfolio</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Date&#39;</span><span class="p">)[</span><span class="s1">&#39;std_lag&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">qcut</span><span class="p">,</span> <span class="n">q</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+    <span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Date&#39;</span><span class="p">,</span> <span class="s1">&#39;Portfolio&#39;</span><span class="p">])</span>
+    <span class="p">[</span><span class="s1">&#39;ret&#39;</span><span class="p">]</span>
+    <span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="o">.</span><span class="n">unstack</span><span class="p">()</span>
+    <span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">x</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_3</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Portfolio</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>731.0000</td>
+      <td>731.0000</td>
+      <td>731.0000</td>
+      <td>731.0000</td>
+      <td>731.0000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>0.0103</td>
+      <td>0.0120</td>
+      <td>0.0123</td>
+      <td>0.0152</td>
+      <td>0.0204</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>0.0358</td>
+      <td>0.0436</td>
+      <td>0.0490</td>
+      <td>0.0558</td>
+      <td>0.0787</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>-0.1472</td>
+      <td>-0.2354</td>
+      <td>-0.2503</td>
+      <td>-0.2746</td>
+      <td>-0.3272</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>-0.0099</td>
+      <td>-0.0117</td>
+      <td>-0.0149</td>
+      <td>-0.0170</td>
+      <td>-0.0227</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>0.0132</td>
+      <td>0.0151</td>
+      <td>0.0157</td>
+      <td>0.0174</td>
+      <td>0.0182</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>0.0311</td>
+      <td>0.0367</td>
+      <td>0.0413</td>
+      <td>0.0481</td>
+      <td>0.0641</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>0.1329</td>
+      <td>0.1950</td>
+      <td>0.1781</td>
+      <td>0.2206</td>
+      <td>0.4369</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_4</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span>
+        <span class="p">[</span>
+            <span class="n">df_3</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">mean</span><span class="p">,</span> <span class="n">ann</span><span class="o">=</span><span class="mi">12</span><span class="p">),</span>
+            <span class="n">df_3</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">std</span><span class="p">,</span> <span class="n">ann</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">12</span><span class="p">)),</span>
+            <span class="n">df_3</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">sharpe</span><span class="p">,</span> <span class="n">rf</span><span class="o">=</span><span class="n">ff</span><span class="p">[</span><span class="s1">&#39;RF&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;period&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">prod</span><span class="p">()</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">ann</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">12</span><span class="p">))</span>
+        <span class="p">],</span>
+        <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">keys</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Mean&#39;</span><span class="p">,</span> <span class="s1">&#39;Standard Deviation&#39;</span><span class="p">,</span> <span class="s1">&#39;Sharpe Ratio&#39;</span><span class="p">],</span>
+        <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Statistic&#39;</span><span class="p">]</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_4</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Statistic</th>
+      <th>Mean</th>
+      <th>Standard Deviation</th>
+      <th>Sharpe Ratio</th>
+    </tr>
+    <tr>
+      <th>Portfolio</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>12.3963</td>
+      <td>12.4139</td>
+      <td>0.6481</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>14.3477</td>
+      <td>15.0877</td>
+      <td>0.6634</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>14.7852</td>
+      <td>16.9639</td>
+      <td>0.6159</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>18.1812</td>
+      <td>19.3437</td>
+      <td>0.7159</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>24.5168</td>
+      <td>27.2776</td>
+      <td>0.7387</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_4</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">subplots</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Portfolios Formed on Lagged Volatility</span><span class="se">\n</span><span class="s1"> for Russell 1000 Stocks from </span><span class="si">{</span><span class="n">df_3</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1"> to </span><span class="si">{</span><span class="n">df_3</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">1.05</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/35310c161a53b9b1614ef53e7f0bd75eb19d0cd15c21be1493cdb4a0cd16143f.png" src="_images/35310c161a53b9b1614ef53e7f0bd75eb19d0cd15c21be1493cdb4a0cd16143f.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="discussion">
+<h2>Discussion<a class="headerlink" href="#discussion" title="Permalink to this heading">#</a></h2>
+<section id="task-10-discuss-and-explain-any-limitations-of-your-analysis-above">
+<h3>Task 10: Discuss and explain any limitations of your analysis above<a class="headerlink" href="#task-10-discuss-and-explain-any-limitations-of-your-analysis-above" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Selection bias</p>
+<ul>
+<li><p>Two years</p></li>
+<li><p>Russell 1000 stocks</p></li>
+</ul>
+</li>
+<li><p>Survivorship bias in Yahoo! Finance database</p></li>
+<li><p>Could try larger portfolios and more portfolios</p></li>
+<li><p>Means, volatilities, Sharpe Ratios, and $\beta$s are not the only measures of risk and return</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="criteria">
+<h1>Criteria<a class="headerlink" href="#criteria" title="Permalink to this heading">#</a></h1>
+<ol class="arabic simple">
+<li><p>All tasks are worth ten points</p></li>
+<li><p>Discuss and explain your findings for all ten tasks</p></li>
+<li><p>Here are a few more tips</p>
+<ol class="arabic simple">
+<li><p><em><strong>Your goal is to convince me of your calculations and conclusions</strong></em></p></li>
+<li><p>I typically find figures most convincing</p></li>
+<li><p>If you use correlations, consider how a handful of outliers may affect your findings</p></li>
+<li><p>Remove unnecessary code, outputs, and print statements</p></li>
+<li><p>Write functions for calculations that you expect to use more than once</p></li>
+<li><p><em><strong>I will not penalize code style, but I will penalize submissions that are difficult to follow or do not follow these instructions</strong></em></p></li>
+</ol>
+</li>
+<li><p>How to submit your project</p>
+<ol class="arabic simple">
+<li><p>Restart your kernel, run all cells, and save your notebook</p></li>
+<li><p>Export your notebook to PDF (<code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">Save</span> <span class="pre">And</span> <span class="pre">Export</span> <span class="pre">Notebook</span> <span class="pre">As</span> <span class="pre">...</span> <span class="pre">&gt;</span> <span class="pre">PDF</span></code> in JupyterLab)</p>
+<ol class="arabic simple">
+<li><p>If this export does not work, you can either (1) Install MikTeX on your laptop with the default settings or (2) use DataCamp Workspace to export your notebook to PDF</p></li>
+<li><p>You do not need to re-run your notebook to export it because notebooks store output cells</p></li>
+</ol>
+</li>
+<li><p>Upload your notebook and PDF to Canvas</p></li>
+<li><p>Upload your PDF only to Gradescope and tag your teammates</p></li>
+<li><p>Gradescope helps me give better feedback more quickly, but I do not consider it reliable for sharing and storing your submission files</p></li>
+</ol>
+</li>
+</ol>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="project_01.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Project 1</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="project_02.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Project 2</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Project 1 Solution</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose">Purpose</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tasks">Tasks</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#packages-and-settings">Packages and Settings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#single-stocks">Single Stocks</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1-do-mean-returns-in-year-t-predict-mean-returns-in-year-t-1">Task 1: Do mean returns in year $t$ predict mean returns in year $t+1$?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2-does-volatility-in-year-t-predict-volatility-in-year-t-1">Task 2: Does volatility in year $t$ predict volatility in year $t+1$?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3-do-sharpe-ratios-in-year-t-predict-sharpe-ratios-in-year-t-1">Task 3: Do Sharpe Ratios in year $t$ predict Sharpe Ratios in year $t+1$?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-4-do-capm-betas-in-year-t-predict-capm-betas-in-year-t-1">Task 4: Do CAPM betas in year $t$ predict CAPM betas in year $t+1$?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-5-does-volatility-in-year-t-predict-mean-returns-in-year-t-1">Task 5: Does volatility in year $t$ predict <em>mean returns</em> in year $t+1$?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-6-does-capm-beta-in-year-t-predict-mean-returns-in-year-t-1">Task 6: Does CAPM beta in year $t$ predict <em>mean returns</em> in year $t+1$?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#portfolios-i">Portfolios I</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-7-does-volatility-in-year-t-predict-mean-returns-in-year-t-1">Task 7: Does volatility in year $t$ predict <em>mean returns</em> in year $t+1$?</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-of-single-stocks-and-portfolios">Comparison of Single Stocks and Portfolios</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-8-does-capm-beta-in-year-t-predict-mean-returns-in-year-t-1">Task 8: Does CAPM beta in year $t$ predict <em>mean returns</em> in year $t+1$?</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Comparison of Single Stocks and Portfolios</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#portfolios-ii">Portfolios II</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-9-do-high-volatility-portfolios-have-high-mean-returns-and-sharpe-ratios">Task 9: Do high volatility portfolios have high mean returns and Sharpe Ratios?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discussion">Discussion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-10-discuss-and-explain-any-limitations-of-your-analysis-above">Task 10: Discuss and explain any limitations of your analysis above</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#criteria">Criteria</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Richard Herron
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

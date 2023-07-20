@@ -1,0 +1,888 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Herron Topic 7 - Practice (Wednesday 2:45 PM, Section 2) &#8212; FINA 6333</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'herron_07_practice_02';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Quiz 1" href="quiz_01.html" />
+    <link rel="prev" title="Herron Topic 7 - Practice (Wednesday 11:45 AM, Section 4)" href="herron_07_practice_04.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="_introduction.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/DMSB_100th_LogoMark_CMYK_Horiz.jpg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/DMSB_100th_LogoMark_CMYK_Horiz.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="_introduction.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lectures and Practice</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="mckinney_02_lecture.html">McKinney Chapter 2 - Python Language Basics, IPython, and Jupyter Notebooks</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_02_practice.html">McKinney Chapter 2 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_02_practice_03.html">McKinney Chapter 2 - Practice (Section 3, Monday 2:45 PM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_02_practice_04.html">McKinney Chapter 2 - Practice (Section 4, Wednesday 11:45 AM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_02_practice_02.html">McKinney Chapter 2 - Practice (Section 2, Wednesday 2:45 PM)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="mckinney_03_lecture.html">McKinney Chapter 3 - Built-In Data Structures, Functions, and Files</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_03_practice.html">McKinney Chapter 3 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_03_practice_04.html">McKinney Chapter 3 - Practice (Section 4, Wednesday 11:45 AM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_03_practice_02.html">McKinney Chapter 3 - Practice (Section 2, Wednesday 2:45 PM)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="mckinney_04_lecture.html">McKinney Chapter 4 - NumPy Basics: Arrays and Vectorized Computation</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_04_practice.html">McKinney Chapter 4 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_04_practice_03.html">McKinney Chapter 4 - Practice (Section 3, Monday 2:45 PM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_04_practice_04.html">McKinney Chapter 4 - Practice (Section 4, Wednesday 11:45 AM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_04_practice_02.html">McKinney Chapter 4 - Practice (Section 2, Wednesday 2:45 PM)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="mckinney_05_lecture.html">McKinney Chapter 5 - Getting Started with pandas</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_05_practice.html">McKinney Chapter 5 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_05_practice_03.html">McKinney Chapter 5 - Practice (Section 3, Monday 2:45 PM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_05_practice_04.html">McKinney Chapter 5 - Practice (Section 4, Wednesday 11:45 AM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_05_practice_02.html">McKinney Chapter 5 - Practice (Section 2, Wednesday 2:45 PM)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="herron_01_lecture.html">Herron Topic 1 - Web Data, Log and Simple Returns, and Portfolio Math</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="herron_01_practice.html">Herron Topic 1 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_01_practice_03.html">Herron Topic 1 - Practice (Section 3, Monday 2:45 PM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_01_practice_04.html">Herron Topic 1 - Practice (Section 4, Wednesday 11:45 AM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_01_practice_02.html">Herron Topic 1 - Practice (Section 2, Wednesday 2:45 PM)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="mckinney_08_lecture.html">McKinney Chapter 8 - Data Wrangling: Join, Combine, and Reshape</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_08_practice.html">McKinney Chapter 8 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_08_practice_03.html">McKinney Chapter 8 - Practice (Monday 2:45 PM, Section 3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_08_practice_04.html">McKinney Chapter 8 - Practice (Wednesday 11:45 AM, Section 4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_08_practice_02.html">McKinney Chapter 8 - Practice (Wednesday 2:45 PM, Section 2)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="mckinney_10_lecture.html">McKinney Chapter 10 - Data Aggregation and Group Operations</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_10_practice.html">McKinney Chapter 10 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_10_practice_all.html">McKinney Chapter 10 - Practice (All Sections)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="mckinney_11_lecture.html">McKinney Chapter 11 - Time Series</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_11_practice.html">McKinney Chapter 11 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_11_practice_03.html">McKinney Chapter 11 - Practice (Monday 2:45 PM, Section 3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_11_practice_04.html">McKinney Chapter 11 - Practice (Wednesday 11:45 AM, Section 4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_11_practice_02.html">McKinney Chapter 11 - Practice (Wednesday 2:45 PM, Section 2)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="herron_02_lecture.html">Herron Topic 2 - Trading Strategies</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="herron_02_practice.html">Herron Topic 2 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_02_practice_03.html">Herron Topic 2 - Practice (Monday 2:45 PM, Section 3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_02_practice_04.html">Herron Topic 2 - Practice (Monday 11:45 AM, Section 4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_02_practice_02.html">Herron Topic 2 - Practice (Wednesday 2:45 PM, Section 2)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="herron_03_lecture.html">Herron Topic 3 - Multifactor Models</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="herron_03_practice.html">Herron Topic 3 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_03_practice_03.html">Herron Topic 3 - Practice (Monday 2:45 PM, Section 3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_03_practice_04.html">Herron Topic 3 - Practice (Monday 11:45 AM, Section 4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_03_practice_02.html">Herron Topic 3 - Practice (Wednesday 2:45 PM, Section 2)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="herron_04_lecture.html">Herron Topic 4 - Portfolio Optimization</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="herron_04_practice.html">Herron Topic 4 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_04_practice_03.html">Herron Topic 4 - Practice (Monday 2:45 PM, Section 3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_04_practice_04.html">Herron Topic 4 - Practice (Wednesday 11:45 AM, Section 4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_04_practice_02.html">Herron Topic 4 - Practice (Wednesday 2:45 PM, Section 2)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="herron_05_lecture.html">Herron Topic 5 - Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="herron_05_practice.html">Herron Topic 5 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_05_practice_03.html">Herron Topic 5 - Practice (Monday 2:45 PM, Section 3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_05_practice_04.html">Herron Topic 5 - Practice (Wednesday 11:45 AM, Section 4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_05_practice_02.html">Herron Topic 5 - Practice (Wednesday 2:45 PM, Section 2)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="herron_06_lecture.html">Herron Topic 6 - Size, Value, and Momentum Investing</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="herron_06_practice.html">Herron Topic 6 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_06_practice_03.html">Herron Topic 6 - Practice (Monday 2:45 PM, Section 3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_06_practice_04.html">Herron Topic 6 - Practice (Wednesday 11:45 AM, Section 4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_06_practice_02.html">Herron Topic 6 - Practice (Wednesday 2:45 PM, Section 2)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="herron_07_lecture.html">Herron Topic 7 - Five Stylized Facts of Asset Returns</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="herron_07_practice.html">Herron Topic 7 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_07_practice_03.html">Herron Topic 7 - Practice (Monday 2:45 PM, Section 3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_07_practice_04.html">Herron Topic 7 - Practice (Wednesday 11:45 AM, Section 4)</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Herron Topic 7 - Practice (Wednesday 2:45 PM, Section 2)</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quizzes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="quiz_01.html">Quiz 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quiz_02.html">Quiz 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quiz_03.html">Quiz 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quiz_04.html">Quiz 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quiz_05.html">Quiz 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quiz_06.html">Quiz 6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quiz_07.html">Quiz 7</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Projects</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="project_01.html">Project 1</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="project_01_solution.html">Project 1 Solution</a></li>
+
+
+
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="project_02.html">Project 2</a></li>
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/herron_07_practice_02.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Herron Topic 7 - Practice (Wednesday 2:45 PM, Section 2)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#announcements">Announcements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practice">Practice</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#repeat-the-comparison-of-log-and-simple-returns-with-monthly-and-annual-returns">Repeat the comparison of log and simple returns with monthly and annual returns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#repeat-the-autocorrelation-plot-with-monthly-returns-instead-of-daily-returns">Repeat the autocorrelation plot with <em>monthly</em> returns instead of <em>daily</em> returns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-monthly-returns-versus-their-one-month-lag">Plot monthly returns versus their one-month lag</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#repeat-the-autocorrelation-plot-with-the-absolute-value-of-daily-returns">Repeat the autocorrelation plot with the <em>absolute value</em> of daily returns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#repeat-the-leverage-effect-plot-with-lagged-returns">Repeat the leverage effect plot with lagged returns</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="herron-topic-7-practice-wednesday-2-45-pm-section-2">
+<h1>Herron Topic 7 - Practice (Wednesday 2:45 PM, Section 2)<a class="headerlink" href="#herron-topic-7-practice-wednesday-2-45-pm-section-2" title="Permalink to this heading">#</a></h1>
+<section id="announcements">
+<h2>Announcements<a class="headerlink" href="#announcements" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Quiz 7 (our last quiz!) is due Friday, 4/14, at 11:59 PM</p></li>
+<li><p>Week of 4/17</p>
+<ul>
+<li><p>I will record a lecture for Herron topic 5 on simulations and post a practice notebook</p></li>
+<li><p>However, we will use class time for group work</p></li>
+<li><p>This is a compromise between survey responses (1/3 wanted to drop simulations, 2/3 did not) and Monday’s holiday (Patriot’s Day)</p></li>
+</ul>
+</li>
+<li><p>Week of 4/24</p>
+<ul>
+<li><p>No lecture</p></li>
+<li><p>We will use class time for group work</p></li>
+</ul>
+</li>
+<li><p>Due dates</p>
+<ul>
+<li><p>Project 2 at 11:59 PM on Wednesday, 4/26</p></li>
+<li><p>Teammates review 2 at 11:59 PM on Wednesday, 4/26</p></li>
+<li><p>30,000 DataCamp XP at 11:59 PM on Friday, 4/28</p></li>
+</ul>
+</li>
+<li><p><em><strong>Please complete TRACE feedback on what topics, tools, and techniques you want more of</strong></em></p></li>
+</ul>
+</section>
+<section id="practice">
+<h2>Practice<a class="headerlink" href="#practice" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">config</span> InlineBackend.figure_format = &#39;retina&#39;
+<span class="o">%</span><span class="k">precision</span> 4
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">float_format</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{:.4f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests_cache</span>
+<span class="n">session</span> <span class="o">=</span> <span class="n">requests_cache</span><span class="o">.</span><span class="n">CachedSession</span><span class="p">()</span>
+<span class="kn">import</span> <span class="nn">yfinance</span> <span class="k">as</span> <span class="nn">yf</span>
+<span class="kn">import</span> <span class="nn">pandas_datareader</span> <span class="k">as</span> <span class="nn">pdr</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mkt</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">pdr</span><span class="o">.</span><span class="n">DataReader</span><span class="p">(</span>
+        <span class="n">name</span><span class="o">=</span><span class="s1">&#39;F-F_Research_Data_Factors_daily&#39;</span><span class="p">,</span>
+        <span class="n">data_source</span><span class="o">=</span><span class="s1">&#39;famafrench&#39;</span><span class="p">,</span>
+        <span class="n">start</span><span class="o">=</span><span class="s1">&#39;1900&#39;</span><span class="p">,</span>
+        <span class="n">session</span><span class="o">=</span><span class="n">session</span>
+    <span class="p">)</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="o">.</span><span class="n">assign</span><span class="p">(</span>
+        <span class="n">R</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;Mkt-RF&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;RF&#39;</span><span class="p">])</span> <span class="o">/</span> <span class="mi">100</span><span class="p">,</span>
+        <span class="n">logR</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;R&#39;</span><span class="p">])</span>
+    <span class="p">)</span>
+    <span class="p">[[</span><span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;logR&#39;</span><span class="p">]]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">labels</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;R&#39;</span><span class="p">:</span> <span class="s1">&#39;Simple Return&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;logR&#39;</span><span class="p">:</span> <span class="s1">&#39;Log Return&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="repeat-the-comparison-of-log-and-simple-returns-with-monthly-and-annual-returns">
+<h3>Repeat the comparison of log and simple returns with monthly and annual returns<a class="headerlink" href="#repeat-the-comparison-of-log-and-simple-returns-with-monthly-and-annual-returns" title="Permalink to this heading">#</a></h3>
+<p>We could download monthly and annual data from the Ken French data library.
+However, we can also use the <code class="docutils literal notranslate"><span class="pre">.resample()</span></code> method to compound daily returns into monthly and annual returns.
+Let us use the <code class="docutils literal notranslate"><span class="pre">.resample()</span></code> method (1) for practice and (2) because the <code class="docutils literal notranslate"><span class="pre">.resample()</span></code> code is simpler and more compact than the <code class="docutils literal notranslate"><span class="pre">pdr.DataReader()</span></code> code.
+We need to re-calculate the log return.
+We could instead sum the daily log returns, but combining the <code class="docutils literal notranslate"><span class="pre">.resample()</span></code> method with two different operations on two differ columns is complex and easily avoided here.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">totret</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">prod</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mkt_m</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">mkt</span><span class="p">[[</span><span class="s1">&#39;R&#39;</span><span class="p">]]</span>
+    <span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">rule</span><span class="o">=</span><span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;period&#39;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">totret</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">logR</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;R&#39;</span><span class="p">]))</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mkt_a</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">mkt</span><span class="p">[[</span><span class="s1">&#39;R&#39;</span><span class="p">]]</span>
+    <span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">rule</span><span class="o">=</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;period&#39;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">totret</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">logR</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;R&#39;</span><span class="p">]))</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We want to repeat this plot for monthly and annual returns, so we can make out lives easier by writing a function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plot_compare_returns</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">freq</span><span class="p">,</span> <span class="n">labs</span><span class="o">=</span><span class="n">labels</span><span class="p">):</span>
+    <span class="n">x</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;logR&#39;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;scatter&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Comparison of </span><span class="si">{</span><span class="n">freq</span><span class="si">}</span><span class="s1"> Log and Simple Returns&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="n">labs</span><span class="p">[</span><span class="s1">&#39;R&#39;</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="n">labs</span><span class="p">[</span><span class="s1">&#39;logR&#39;</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Log and simple returns are similar for small returns.
+We almost always see small daily returns, which rarely exceed 10% in magnitude.
+However, at monthly frequencies, we start to see large outliers, where the similarity of log and simple returns starts to break down.</p>
+<p>Recall the <code class="docutils literal notranslate"><span class="pre">.pipe()</span></code> method allows us to think “data first”.
+Here <code class="docutils literal notranslate"><span class="pre">mkt_m.pipe(plot_compare_returns,</span> <span class="pre">freq='Monthly')</span></code> is the same as <code class="docutils literal notranslate"><span class="pre">plot_compare_returns(mkt_m,</span> <span class="pre">freq='Monthly')</span></code>.
+One is not better than the other, but I find it useful to think “data, then operation, then operation, …”, instead of “operation, then operation, …, then data”.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mkt_m</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">plot_compare_returns</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;Monthly&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/9da6a387ba9225585f23ec07e7688582194b74a315970a52fe7835f195a9cae0.png" src="_images/9da6a387ba9225585f23ec07e7688582194b74a315970a52fe7835f195a9cae0.png" />
+</div>
+</div>
+<p>At annual frequencies, log and simple returns can be quite different!
+For example, at $R_{simple} \approx 0.6$, we see $R_{log} \approx 0.4$.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mkt_a</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">plot_compare_returns</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;Annual&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/91cdd1a6918dd2338d6e0bca41671f9f1ec0bb9d5d3f929ce8578b058048cf54.png" src="_images/91cdd1a6918dd2338d6e0bca41671f9f1ec0bb9d5d3f929ce8578b058048cf54.png" />
+</div>
+</div>
+</section>
+<section id="repeat-the-autocorrelation-plot-with-monthly-returns-instead-of-daily-returns">
+<h3>Repeat the autocorrelation plot with <em>monthly</em> returns instead of <em>daily</em> returns<a class="headerlink" href="#repeat-the-autocorrelation-plot-with-monthly-returns-instead-of-daily-returns" title="Permalink to this heading">#</a></h3>
+<p>Again, we will write a function to plot these autocorrelations.</p>
+</section>
+<section id="plot-monthly-returns-versus-their-one-month-lag">
+<h3>Plot monthly returns versus their one-month lag<a class="headerlink" href="#plot-monthly-returns-versus-their-one-month-lag" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plot_autocorr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">freq</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">labs</span><span class="o">=</span><span class="n">labels</span><span class="p">):</span>
+    <span class="n">x_lags</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">objs</span><span class="o">=</span><span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;R&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">corrs</span> <span class="o">=</span> <span class="n">x_lags</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">serrs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="mi">1</span> <span class="o">-</span> <span class="n">corrs</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">x_lags</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">-</span> <span class="mi">2</span><span class="p">))</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="n">corrs</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">yerr</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="n">serrs</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span>
+        <span class="sa">f</span><span class="s1">&#39;Autocorrelation of </span><span class="si">{</span><span class="n">freq</span><span class="si">}</span><span class="s1"> Returns&#39;</span> <span class="o">+</span>
+        <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Black Vertical Bars Indicate Standard Errors&#39;</span>
+    <span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">freq</span><span class="si">}</span><span class="s1"> Lag&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Autocorrelation Coefficient&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>At the monthly horizon, return autocorrelation weakens!
+All autocorrelation coefficient estimates are small and less than two standard errors away from zero.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mkt_m</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">plot_autocorr</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;Monthly&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/e50eaaa95743b0cfbb3f396f86d62395449865d5d37837b808ec8883ec31cd3f.png" src="_images/e50eaaa95743b0cfbb3f396f86d62395449865d5d37837b808ec8883ec31cd3f.png" />
+</div>
+</div>
+<p>At the annual horizon, return autocorrelation disappears!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mkt_a</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">plot_autocorr</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;Annual&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/464841c0b36ed50158550c2c63776c49d41933e9b37ec4d568cdf332d6b0ed28.png" src="_images/464841c0b36ed50158550c2c63776c49d41933e9b37ec4d568cdf332d6b0ed28.png" />
+</div>
+</div>
+</section>
+<section id="repeat-the-autocorrelation-plot-with-the-absolute-value-of-daily-returns">
+<h3>Repeat the autocorrelation plot with the <em>absolute value</em> of daily returns<a class="headerlink" href="#repeat-the-autocorrelation-plot-with-the-absolute-value-of-daily-returns" title="Permalink to this heading">#</a></h3>
+<p>We can use our function again!
+But first, we have to convert simple returns to the <em>absolute value</em> of simple returns.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">mkt</span>
+    <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">R</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;R&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">abs</span><span class="p">())</span>
+    <span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">plot_autocorr</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;Absolute Value of Daily&#39;</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/cc8f241a78be63b790360cc93abd6d31ac40c11d0865e6e2dd7c866cd2d56c71.png" src="_images/cc8f241a78be63b790360cc93abd6d31ac40c11d0865e6e2dd7c866cd2d56c71.png" />
+</div>
+</div>
+<p>Saying that “squared returns” or “the absolute value of returns” is autocorrelated is similar to saying “return magnitudes” are autocorrelated, which is similar to saying “volatility” is autocorrelated or persistent.</p>
+</section>
+<section id="repeat-the-leverage-effect-plot-with-lagged-returns">
+<h3>Repeat the leverage effect plot with lagged returns<a class="headerlink" href="#repeat-the-leverage-effect-plot-with-lagged-returns" title="Permalink to this heading">#</a></h3>
+<p>We will only make this plot, but we can still write a function!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plot_leverage_effect</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">rule</span><span class="p">,</span> <span class="n">freq</span><span class="p">):</span>
+    <span class="p">(</span>
+        <span class="n">x</span><span class="p">[</span><span class="s1">&#39;R&#39;</span><span class="p">]</span>
+        <span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">rule</span><span class="o">=</span><span class="n">rule</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;period&#39;</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="n">totret</span><span class="p">,</span> <span class="s1">&#39;std&#39;</span><span class="p">])</span>
+        <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">totret_lag</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;totret&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">())</span>
+        <span class="o">.</span><span class="n">mul</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span>
+              <span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span>
+                  <span class="n">x</span><span class="o">=</span><span class="s1">&#39;totret_lag&#39;</span><span class="p">,</span> 
+                  <span class="n">y</span><span class="o">=</span><span class="s1">&#39;std&#39;</span><span class="p">,</span> 
+                  <span class="n">data</span><span class="o">=</span><span class="n">x</span><span class="p">,</span>
+                  <span class="n">scatter_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;alpha&#39;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">}</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;One-</span><span class="si">{</span><span class="n">freq</span><span class="si">}</span><span class="s1"> Lag of Total Return (%)&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Volatility of Returns (%)&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span>
+        <span class="s1">&#39;Fisher Black</span><span class="se">\&#39;</span><span class="s1">s Leverage Effect</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> 
+        <span class="sa">f</span><span class="s1">&#39;(Daily Returns Aggregated by </span><span class="si">{</span><span class="n">freq</span><span class="si">}</span><span class="s1">)&#39;</span>
+    <span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mkt</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">plot_leverage_effect</span><span class="p">,</span> <span class="n">rule</span><span class="o">=</span><span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;Month&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/b23fd71fc13e9a18e65dcc695f8b94000cb9cfdc1ea9fbd84b5559b54166ed22.png" src="_images/b23fd71fc13e9a18e65dcc695f8b94000cb9cfdc1ea9fbd84b5559b54166ed22.png" />
+</div>
+</div>
+<p>Since we have the function, let use a try a few different horizons!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mkt</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">plot_leverage_effect</span><span class="p">,</span> <span class="n">rule</span><span class="o">=</span><span class="s1">&#39;Q&#39;</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;Quarter&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/4aea303060f95e8ebc6fa066317af74180a96d10a65d6ec7eb41c225bb93b389.png" src="_images/4aea303060f95e8ebc6fa066317af74180a96d10a65d6ec7eb41c225bb93b389.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mkt</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">plot_leverage_effect</span><span class="p">,</span> <span class="n">rule</span><span class="o">=</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;Annual&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/b558f57c6bf8364ad9d969e983e09b83213e07b01e821eea53c09352d4f9c20d.png" src="_images/b558f57c6bf8364ad9d969e983e09b83213e07b01e821eea53c09352d4f9c20d.png" />
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="herron_07_practice_04.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Herron Topic 7 - Practice (Wednesday 11:45 AM, Section 4)</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="quiz_01.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Quiz 1</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#announcements">Announcements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practice">Practice</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#repeat-the-comparison-of-log-and-simple-returns-with-monthly-and-annual-returns">Repeat the comparison of log and simple returns with monthly and annual returns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#repeat-the-autocorrelation-plot-with-monthly-returns-instead-of-daily-returns">Repeat the autocorrelation plot with <em>monthly</em> returns instead of <em>daily</em> returns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-monthly-returns-versus-their-one-month-lag">Plot monthly returns versus their one-month lag</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#repeat-the-autocorrelation-plot-with-the-absolute-value-of-daily-returns">Repeat the autocorrelation plot with the <em>absolute value</em> of daily returns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#repeat-the-leverage-effect-plot-with-lagged-returns">Repeat the leverage effect plot with lagged returns</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Richard Herron
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,2189 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Herron Topic 5 - Simulations &#8212; FINA 6333</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'herron_05_lecture';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Herron Topic 5 - Practice (Blank)" href="herron_05_practice.html" />
+    <link rel="prev" title="Herron Topic 4 - Practice (Wednesday 2:45 PM, Section 2)" href="herron_04_practice_02.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="_introduction.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/DMSB_100th_LogoMark_CMYK_Horiz.jpg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/DMSB_100th_LogoMark_CMYK_Horiz.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="_introduction.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lectures and Practice</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="mckinney_02_lecture.html">McKinney Chapter 2 - Python Language Basics, IPython, and Jupyter Notebooks</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_02_practice.html">McKinney Chapter 2 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_02_practice_03.html">McKinney Chapter 2 - Practice (Section 3, Monday 2:45 PM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_02_practice_04.html">McKinney Chapter 2 - Practice (Section 4, Wednesday 11:45 AM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_02_practice_02.html">McKinney Chapter 2 - Practice (Section 2, Wednesday 2:45 PM)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="mckinney_03_lecture.html">McKinney Chapter 3 - Built-In Data Structures, Functions, and Files</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_03_practice.html">McKinney Chapter 3 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_03_practice_04.html">McKinney Chapter 3 - Practice (Section 4, Wednesday 11:45 AM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_03_practice_02.html">McKinney Chapter 3 - Practice (Section 2, Wednesday 2:45 PM)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="mckinney_04_lecture.html">McKinney Chapter 4 - NumPy Basics: Arrays and Vectorized Computation</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_04_practice.html">McKinney Chapter 4 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_04_practice_03.html">McKinney Chapter 4 - Practice (Section 3, Monday 2:45 PM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_04_practice_04.html">McKinney Chapter 4 - Practice (Section 4, Wednesday 11:45 AM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_04_practice_02.html">McKinney Chapter 4 - Practice (Section 2, Wednesday 2:45 PM)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="mckinney_05_lecture.html">McKinney Chapter 5 - Getting Started with pandas</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_05_practice.html">McKinney Chapter 5 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_05_practice_03.html">McKinney Chapter 5 - Practice (Section 3, Monday 2:45 PM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_05_practice_04.html">McKinney Chapter 5 - Practice (Section 4, Wednesday 11:45 AM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_05_practice_02.html">McKinney Chapter 5 - Practice (Section 2, Wednesday 2:45 PM)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="herron_01_lecture.html">Herron Topic 1 - Web Data, Log and Simple Returns, and Portfolio Math</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="herron_01_practice.html">Herron Topic 1 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_01_practice_03.html">Herron Topic 1 - Practice (Section 3, Monday 2:45 PM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_01_practice_04.html">Herron Topic 1 - Practice (Section 4, Wednesday 11:45 AM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_01_practice_02.html">Herron Topic 1 - Practice (Section 2, Wednesday 2:45 PM)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="mckinney_08_lecture.html">McKinney Chapter 8 - Data Wrangling: Join, Combine, and Reshape</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_08_practice.html">McKinney Chapter 8 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_08_practice_03.html">McKinney Chapter 8 - Practice (Monday 2:45 PM, Section 3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_08_practice_04.html">McKinney Chapter 8 - Practice (Wednesday 11:45 AM, Section 4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_08_practice_02.html">McKinney Chapter 8 - Practice (Wednesday 2:45 PM, Section 2)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="mckinney_10_lecture.html">McKinney Chapter 10 - Data Aggregation and Group Operations</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_10_practice.html">McKinney Chapter 10 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_10_practice_all.html">McKinney Chapter 10 - Practice (All Sections)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="mckinney_11_lecture.html">McKinney Chapter 11 - Time Series</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_11_practice.html">McKinney Chapter 11 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_11_practice_03.html">McKinney Chapter 11 - Practice (Monday 2:45 PM, Section 3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_11_practice_04.html">McKinney Chapter 11 - Practice (Wednesday 11:45 AM, Section 4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_11_practice_02.html">McKinney Chapter 11 - Practice (Wednesday 2:45 PM, Section 2)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="herron_02_lecture.html">Herron Topic 2 - Trading Strategies</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="herron_02_practice.html">Herron Topic 2 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_02_practice_03.html">Herron Topic 2 - Practice (Monday 2:45 PM, Section 3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_02_practice_04.html">Herron Topic 2 - Practice (Monday 11:45 AM, Section 4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_02_practice_02.html">Herron Topic 2 - Practice (Wednesday 2:45 PM, Section 2)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="herron_03_lecture.html">Herron Topic 3 - Multifactor Models</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="herron_03_practice.html">Herron Topic 3 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_03_practice_03.html">Herron Topic 3 - Practice (Monday 2:45 PM, Section 3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_03_practice_04.html">Herron Topic 3 - Practice (Monday 11:45 AM, Section 4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_03_practice_02.html">Herron Topic 3 - Practice (Wednesday 2:45 PM, Section 2)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="herron_04_lecture.html">Herron Topic 4 - Portfolio Optimization</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="herron_04_practice.html">Herron Topic 4 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_04_practice_03.html">Herron Topic 4 - Practice (Monday 2:45 PM, Section 3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_04_practice_04.html">Herron Topic 4 - Practice (Wednesday 11:45 AM, Section 4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_04_practice_02.html">Herron Topic 4 - Practice (Wednesday 2:45 PM, Section 2)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Herron Topic 5 - Simulations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="herron_05_practice.html">Herron Topic 5 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_05_practice_03.html">Herron Topic 5 - Practice (Monday 2:45 PM, Section 3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_05_practice_04.html">Herron Topic 5 - Practice (Wednesday 11:45 AM, Section 4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_05_practice_02.html">Herron Topic 5 - Practice (Wednesday 2:45 PM, Section 2)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="herron_06_lecture.html">Herron Topic 6 - Size, Value, and Momentum Investing</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="herron_06_practice.html">Herron Topic 6 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_06_practice_03.html">Herron Topic 6 - Practice (Monday 2:45 PM, Section 3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_06_practice_04.html">Herron Topic 6 - Practice (Wednesday 11:45 AM, Section 4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_06_practice_02.html">Herron Topic 6 - Practice (Wednesday 2:45 PM, Section 2)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="herron_07_lecture.html">Herron Topic 7 - Five Stylized Facts of Asset Returns</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="herron_07_practice.html">Herron Topic 7 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_07_practice_03.html">Herron Topic 7 - Practice (Monday 2:45 PM, Section 3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_07_practice_04.html">Herron Topic 7 - Practice (Wednesday 11:45 AM, Section 4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_07_practice_02.html">Herron Topic 7 - Practice (Wednesday 2:45 PM, Section 2)</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quizzes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="quiz_01.html">Quiz 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quiz_02.html">Quiz 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quiz_03.html">Quiz 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quiz_04.html">Quiz 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quiz_05.html">Quiz 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quiz_06.html">Quiz 6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quiz_07.html">Quiz 7</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Projects</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="project_01.html">Project 1</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="project_01_solution.html">Project 1 Solution</a></li>
+
+
+
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="project_02.html">Project 2</a></li>
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/herron_05_lecture.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Herron Topic 5 - Simulations</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#option-pricing">Option Pricing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simulating-stock-prices">Simulating Stock Prices</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pricing-options">Pricing Options</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimating-value-at-risk-using-monte-carlo">Estimating Value-at-Risk using Monte Carlo</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="herron-topic-5-simulations">
+<h1>Herron Topic 5 - Simulations<a class="headerlink" href="#herron-topic-5-simulations" title="Permalink to this heading">#</a></h1>
+<p>In finance, we typically perform simulations with <a class="reference external" href="https://en.wikipedia.org/wiki/Monte_Carlo_method">Monte Carlo methods</a>.
+Monte Carlo methods are used throughout science, engineering, and mathematics, and they are especially useful in finance due to the randomness of asset prices.
+This lecture notebook provides an introduction to <a class="reference external" href="https://en.wikipedia.org/wiki/Monte_Carlo_methods_in_finance">Monte Carlo methods in finance</a>.</p>
+<p>The basic idea behind Monte Carlo methods in finance is to create many possible paths of financial variables (e.g., stock prices, interest rates, exchange rates) based on their historical behavior, statistical properties, and any other relevant factors.
+We use these paths to simulate the performance of financial instruments or portfolios, and then we aggregate these results to estimate metrics of interest.
+This approach helps us model and analyze complex financial problems that may be difficult or impossible to solve analytically.</p>
+<p>We could spend a semester (or more) on simulations and Monte Carlo methods.
+In this lecture notebook, we will limit our focus to:</p>
+<ol class="arabic simple">
+<li><p>Option pricing: Monte Carlo methods can be used to estimate the fair value of financial derivatives, such as options and warrants. By simulating the potential future paths of the underlying asset and calculating the payoffs of the derivative at each path, the expected payoff can be computed and discounted to present value to determine the option’s price.</p></li>
+<li><p>Value at Risk (VaR): Monte Carlo simulations can be used to compute VaR, a widely used risk management metric that estimates the potential loss in the value of a portfolio over a specific time horizon, given a certain level of confidence (e.g., 95% or 99%). By simulating numerous scenarios and observing the distribution of potential losses, the VaR can be calculated as the threshold below which a certain percentage of losses fall.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">config</span> InlineBackend.figure_format = &#39;retina&#39;
+<span class="o">%</span><span class="k">precision</span> 2
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">float_format</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{:.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">yfinance</span> <span class="k">as</span> <span class="nn">yf</span>
+<span class="kn">import</span> <span class="nn">pandas_datareader</span> <span class="k">as</span> <span class="nn">pdr</span>
+<span class="kn">import</span> <span class="nn">requests_cache</span>
+<span class="n">session</span> <span class="o">=</span> <span class="n">requests_cache</span><span class="o">.</span><span class="n">CachedSession</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="option-pricing">
+<h2>Option Pricing<a class="headerlink" href="#option-pricing" title="Permalink to this heading">#</a></h2>
+<p>We can use Monte Carlo methods to value stock options.
+First, we simulate several hundred or thousand possible (but random) price paths for the underlying stock.
+Then, we calculate the payoff for each path.
+On some paths, the option will expire “in the money” with $S_T &gt; K$ and pay $S_T - K$.
+On other paths, the option will expire “out of the money” with $S_T &lt; K$ and pay 0.
+We average these payoffs and discount them to today.
+The present value of these payoffs is the option price.
+This is an illustrative example, and there is a lot of depth to <a class="reference external" href="https://en.wikipedia.org/wiki/Monte_Carlo_methods_for_option_pricing">Monte Carlo methods for option pricing</a>.</p>
+<section id="simulating-stock-prices">
+<h3>Simulating Stock Prices<a class="headerlink" href="#simulating-stock-prices" title="Permalink to this heading">#</a></h3>
+<p>We can simulate stock prices with the following stochastic differential equation (SDE) for Geometric Brownian Motion (GBM): $dS = \mu S dt + \sigma S dW_t$.
+GBM does not account for mean-reversion and time-dependent volatility.
+So GBM is often used for stocks and not for bond prices, which tend to display long-term reversion to the face value.
+In the GBM SDE:</p>
+<ol class="arabic simple">
+<li><p>$S$ is the stock price</p></li>
+<li><p>$\mu$ is the drift coefficient (i.e., instantaneous expected return)</p></li>
+<li><p>$\sigma$ is the diffusion coefficient (i.e., volatility of the drift)</p></li>
+<li><p>$W_t$ is the Wiener Process or Brownian Motion</p></li>
+</ol>
+<p>The GBM SDE has a closed-form solution: $S(t) = S_0 \exp\left(\left(\mu - \frac{1}{2}\sigma^2\right)t + \sigma W_t\right)$.
+We can apply this closed form solution recursively: $S(t_{i+1}) = S(t_i) \exp\left(\left(\mu - \frac{1}{2}\sigma^2\right)(t_{i+1} - t_i) + \sigma \sqrt{t_{i+1} - t_i} Z_{i+1}\right)$.
+Here, $Z_i$ is a Standard Normal random variable ($dW_t$ are independent and normally distributed) and $i = 0, \ldots, T-1$ is the time index.</p>
+<p>We can use this closed form solution to simulate stock prices for AAPL.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">aapl</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">yf</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="n">tickers</span><span class="o">=</span><span class="s1">&#39;AAPL&#39;</span><span class="p">,</span> <span class="n">progress</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">assign</span><span class="p">(</span>
+        <span class="n">Date</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">tz_localize</span><span class="p">(</span><span class="kc">None</span><span class="p">),</span>
+        <span class="n">Return</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;Adj Close&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">pct_change</span><span class="p">()</span>
+    <span class="p">)</span>
+    <span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;Date&#39;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">rename_axis</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Variable&#39;</span><span class="p">])</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">aapl</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Variable</th>
+      <th>Open</th>
+      <th>High</th>
+      <th>Low</th>
+      <th>Close</th>
+      <th>Adj Close</th>
+      <th>Volume</th>
+      <th>Return</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>10674.00</td>
+      <td>10674.00</td>
+      <td>10674.00</td>
+      <td>10674.00</td>
+      <td>10674.00</td>
+      <td>10674.00</td>
+      <td>10673.00</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>17.35</td>
+      <td>17.55</td>
+      <td>17.16</td>
+      <td>17.36</td>
+      <td>16.67</td>
+      <td>325931256.70</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>36.64</td>
+      <td>37.09</td>
+      <td>36.22</td>
+      <td>36.68</td>
+      <td>36.33</td>
+      <td>337395659.86</td>
+      <td>0.03</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>0.05</td>
+      <td>0.05</td>
+      <td>0.05</td>
+      <td>0.05</td>
+      <td>0.04</td>
+      <td>0.00</td>
+      <td>-0.52</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>0.29</td>
+      <td>0.30</td>
+      <td>0.28</td>
+      <td>0.29</td>
+      <td>0.24</td>
+      <td>119995300.00</td>
+      <td>-0.01</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>0.49</td>
+      <td>0.50</td>
+      <td>0.48</td>
+      <td>0.49</td>
+      <td>0.41</td>
+      <td>213094000.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>16.90</td>
+      <td>17.10</td>
+      <td>16.72</td>
+      <td>16.94</td>
+      <td>14.73</td>
+      <td>405541500.00</td>
+      <td>0.01</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>182.63</td>
+      <td>182.94</td>
+      <td>179.12</td>
+      <td>182.01</td>
+      <td>180.68</td>
+      <td>7421640800.00</td>
+      <td>0.33</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>We will use returns from 2021 to predict prices in 2022.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train</span> <span class="o">=</span> <span class="n">aapl</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2021&#39;</span><span class="p">]</span>
+<span class="n">test</span> <span class="o">=</span> <span class="n">aapl</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2022&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We will use the following function to simulate price paths.
+Throughout this lecture notebook, we will use one-trading-day steps (i.e., <code class="docutils literal notranslate"><span class="pre">dt=1</span></code>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">simulate_gbm</span><span class="p">(</span><span class="n">S_0</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">n_steps</span><span class="p">,</span> <span class="n">dt</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Function to simulate stock prices following Geometric Brownian Motion (GBM).</span>
+<span class="sd">    </span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ------------</span>
+<span class="sd">    S_0 : float</span>
+<span class="sd">        Initial stock price</span>
+<span class="sd">    mu : float</span>
+<span class="sd">        Drift coefficient</span>
+<span class="sd">    sigma : float</span>
+<span class="sd">        Diffusion coefficient</span>
+<span class="sd">    n_steps : int</span>
+<span class="sd">        Length of the forecast horizon in time increments, so T = n_steps * dt</span>
+<span class="sd">    dt : int</span>
+<span class="sd">        Time increment, typically one day</span>
+<span class="sd">    seed : int</span>
+<span class="sd">        Random seed for reproducibility</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -----------</span>
+<span class="sd">    S_t : np.ndarray</span>
+<span class="sd">        Array (length: n_steps + 1) of simulated prices</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
+    <span class="n">dW</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dt</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="n">n_steps</span><span class="p">)</span>
+    <span class="n">W</span> <span class="o">=</span> <span class="n">dW</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span>
+    
+    <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">dt</span><span class="p">,</span> <span class="n">n_steps</span> <span class="o">*</span> <span class="n">dt</span><span class="p">,</span> <span class="n">n_steps</span><span class="p">)</span>
+    
+    <span class="n">S_t</span> <span class="o">=</span> <span class="n">S_0</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">((</span><span class="n">mu</span> <span class="o">-</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">sigma</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">t</span> <span class="o">+</span> <span class="n">sigma</span> <span class="o">*</span> <span class="n">W</span><span class="p">)</span>
+    <span class="n">S_t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">S_t</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">S_0</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">S_t</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we will simulate price paths.
+Here is one simulated price path:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">simulate_gbm</span><span class="p">(</span>
+    <span class="n">S_0</span><span class="o">=</span><span class="n">train</span><span class="p">[</span><span class="s1">&#39;Adj Close&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+    <span class="n">mu</span><span class="o">=</span><span class="n">train</span><span class="p">[</span><span class="s1">&#39;Return&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+    <span class="n">sigma</span><span class="o">=</span><span class="n">train</span><span class="p">[</span><span class="s1">&#39;Return&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">)</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span>
+    <span class="n">n_steps</span><span class="o">=</span><span class="n">test</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([176.28, 177.85, 177.65, 179.67, 184.24, 183.76, 183.27, 188.1 ,
+       190.6 , 189.39, 191.22, 190.03, 188.83, 189.76, 184.3 , 179.53,
+       178.13, 175.49, 176.55, 174.21, 170.55, 174.73, 174.29, 174.66,
+       170.95, 169.67, 170.14, 167.25, 168.43, 167.01, 166.42, 165.02,
+       170.1 , 170.24, 167.6 , 169.97, 166.9 , 167.63, 162.68, 159.47,
+       160.14, 162.19, 162.8 , 162.68, 162.07, 158.5 , 156.87, 155.9 ,
+       158.69, 159.72, 155.5 , 156.46, 155.68, 154.18, 155.85, 158.57,
+       161.09, 159.14, 158.53, 159.53, 162.18, 161.13, 160.83, 158.2 ,
+       155.41, 157.58, 161.16, 161.15, 163.9 , 165.01, 163.51, 164.62,
+       168.85, 168.94, 173.35, 166.49, 168.85, 169.26, 168.64, 169.06,
+       164.01, 163.61, 164.71, 168.78, 167.58, 165.63, 164.49, 167.07,
+       168.11, 166.89, 168.43, 168.86, 171.65, 169.93, 169.23, 168.37,
+       164.69, 165.64, 166.5 , 166.69, 166.25, 162.74, 161.83, 161.13,
+       159.27, 159.03, 160.22, 165.24, 165.87, 166.72, 166.7 , 161.89,
+       162.  , 162.32, 168.94, 168.61, 169.59, 169.68, 166.75, 169.97,
+       172.18, 174.53, 172.22, 176.27, 172.59, 174.38, 180.72, 178.1 ,
+       176.7 , 177.16, 175.94, 171.87, 172.23, 169.54, 171.  , 168.71,
+       173.08, 171.13, 170.44, 172.83, 169.68, 170.47, 174.21, 170.02,
+       170.7 , 171.58, 173.9 , 170.71, 167.36, 168.92, 169.9 , 170.75,
+       171.87, 170.21, 171.02, 172.  , 170.24, 175.52, 177.03, 173.91,
+       175.91, 173.41, 175.76, 179.2 , 177.08, 179.98, 181.35, 183.92,
+       189.72, 189.18, 187.14, 184.72, 182.55, 182.52, 183.7 , 184.7 ,
+       187.33, 187.56, 192.12, 191.52, 200.15, 202.35, 199.84, 196.69,
+       198.41, 197.92, 200.38, 202.09, 202.07, 199.6 , 195.08, 193.91,
+       196.76, 197.64, 193.99, 194.73, 196.12, 193.61, 194.28, 194.67,
+       191.38, 192.67, 194.59, 198.16, 201.7 , 197.57, 194.87, 196.67,
+       198.48, 200.31, 213.12, 215.28, 219.41, 222.97, 225.52, 224.64,
+       227.59, 225.06, 224.46, 222.98, 223.5 , 232.08, 225.56, 228.26,
+       222.75, 221.33, 225.41, 225.88, 222.3 , 220.03, 222.64, 220.32,
+       221.31, 221.7 , 219.66, 227.47, 230.01, 223.  , 223.89, 221.8 ,
+       225.04, 222.48, 222.31, 224.32, 227.66, 223.61, 222.67, 221.24,
+       219.2 , 225.64, 227.33, 223.07])
+</pre></div>
+</div>
+</div>
+</div>
+<p>We will combine <code class="docutils literal notranslate"><span class="pre">simulate_gbm()</span></code> with a list comprehension and <code class="docutils literal notranslate"><span class="pre">pd.concat()</span></code> to simulate many price paths.
+To simplify this combination, we will write a helper function <code class="docutils literal notranslate"><span class="pre">simulate_gbm_series()</span></code> that:</p>
+<ol class="arabic simple">
+<li><p>Returns a series</p></li>
+<li><p>Helps us vary the <code class="docutils literal notranslate"><span class="pre">seed</span></code> argument</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">simulate_gbm_series</span><span class="p">(</span><span class="n">seed</span><span class="p">,</span> <span class="n">train</span><span class="o">=</span><span class="n">train</span><span class="p">,</span> <span class="n">test</span><span class="o">=</span><span class="n">test</span><span class="p">):</span>
+    <span class="n">S_t</span> <span class="o">=</span> <span class="n">simulate_gbm</span><span class="p">(</span>
+        <span class="n">S_0</span><span class="o">=</span><span class="n">train</span><span class="p">[</span><span class="s1">&#39;Adj Close&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+        <span class="n">mu</span><span class="o">=</span><span class="n">train</span><span class="p">[</span><span class="s1">&#39;Return&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+        <span class="n">sigma</span><span class="o">=</span><span class="n">train</span><span class="p">[</span><span class="s1">&#39;Return&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">)</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span>
+        <span class="n">n_steps</span><span class="o">=</span><span class="n">test</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="n">seed</span><span class="o">=</span><span class="n">seed</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">S_t</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">test</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">train</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="n">S_t</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span>
+    <span class="n">objs</span><span class="o">=</span><span class="p">[</span><span class="n">simulate_gbm_series</span><span class="p">(</span><span class="n">seed</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span> <span class="k">for</span> <span class="n">seed</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)],</span>
+    <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">keys</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">),</span>
+    <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Simulation&#39;</span><span class="p">]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S_t</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Simulation</th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+      <th>9</th>
+      <th>...</th>
+      <th>90</th>
+      <th>91</th>
+      <th>92</th>
+      <th>93</th>
+      <th>94</th>
+      <th>95</th>
+      <th>96</th>
+      <th>97</th>
+      <th>98</th>
+      <th>99</th>
+    </tr>
+    <tr>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2021-12-31</th>
+      <td>176.28</td>
+      <td>176.28</td>
+      <td>176.28</td>
+      <td>176.28</td>
+      <td>176.28</td>
+      <td>176.28</td>
+      <td>176.28</td>
+      <td>176.28</td>
+      <td>176.28</td>
+      <td>176.28</td>
+      <td>...</td>
+      <td>176.28</td>
+      <td>176.28</td>
+      <td>176.28</td>
+      <td>176.28</td>
+      <td>176.28</td>
+      <td>176.28</td>
+      <td>176.28</td>
+      <td>176.28</td>
+      <td>176.28</td>
+      <td>176.28</td>
+    </tr>
+    <tr>
+      <th>2022-01-03</th>
+      <td>181.45</td>
+      <td>181.05</td>
+      <td>175.30</td>
+      <td>181.52</td>
+      <td>176.60</td>
+      <td>177.70</td>
+      <td>175.59</td>
+      <td>181.24</td>
+      <td>176.72</td>
+      <td>176.47</td>
+      <td>...</td>
+      <td>175.84</td>
+      <td>174.78</td>
+      <td>177.11</td>
+      <td>181.07</td>
+      <td>178.55</td>
+      <td>174.62</td>
+      <td>176.66</td>
+      <td>171.64</td>
+      <td>177.79</td>
+      <td>176.07</td>
+    </tr>
+    <tr>
+      <th>2022-01-04</th>
+      <td>182.80</td>
+      <td>179.50</td>
+      <td>175.33</td>
+      <td>182.97</td>
+      <td>178.19</td>
+      <td>176.96</td>
+      <td>177.82</td>
+      <td>180.10</td>
+      <td>179.98</td>
+      <td>175.85</td>
+      <td>...</td>
+      <td>175.39</td>
+      <td>172.06</td>
+      <td>178.16</td>
+      <td>184.44</td>
+      <td>183.09</td>
+      <td>173.20</td>
+      <td>176.71</td>
+      <td>170.66</td>
+      <td>182.64</td>
+      <td>182.08</td>
+    </tr>
+    <tr>
+      <th>2022-01-05</th>
+      <td>185.84</td>
+      <td>178.19</td>
+      <td>169.69</td>
+      <td>183.45</td>
+      <td>175.59</td>
+      <td>184.08</td>
+      <td>178.62</td>
+      <td>180.39</td>
+      <td>174.71</td>
+      <td>172.95</td>
+      <td>...</td>
+      <td>173.94</td>
+      <td>170.75</td>
+      <td>176.28</td>
+      <td>190.75</td>
+      <td>181.24</td>
+      <td>174.32</td>
+      <td>175.06</td>
+      <td>168.84</td>
+      <td>185.75</td>
+      <td>183.09</td>
+    </tr>
+    <tr>
+      <th>2022-01-06</th>
+      <td>192.75</td>
+      <td>175.38</td>
+      <td>174.33</td>
+      <td>178.31</td>
+      <td>177.72</td>
+      <td>183.54</td>
+      <td>176.28</td>
+      <td>181.74</td>
+      <td>171.11</td>
+      <td>173.10</td>
+      <td>...</td>
+      <td>171.94</td>
+      <td>170.18</td>
+      <td>169.30</td>
+      <td>192.36</td>
+      <td>186.53</td>
+      <td>176.16</td>
+      <td>176.24</td>
+      <td>171.73</td>
+      <td>183.87</td>
+      <td>187.17</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2022-12-23</th>
+      <td>264.37</td>
+      <td>309.02</td>
+      <td>209.29</td>
+      <td>243.87</td>
+      <td>280.98</td>
+      <td>228.05</td>
+      <td>238.47</td>
+      <td>208.71</td>
+      <td>217.12</td>
+      <td>253.82</td>
+      <td>...</td>
+      <td>239.90</td>
+      <td>350.58</td>
+      <td>237.84</td>
+      <td>239.82</td>
+      <td>211.79</td>
+      <td>240.60</td>
+      <td>222.35</td>
+      <td>183.09</td>
+      <td>213.59</td>
+      <td>252.19</td>
+    </tr>
+    <tr>
+      <th>2022-12-27</th>
+      <td>269.20</td>
+      <td>307.19</td>
+      <td>210.77</td>
+      <td>252.25</td>
+      <td>279.95</td>
+      <td>227.38</td>
+      <td>235.26</td>
+      <td>207.00</td>
+      <td>213.48</td>
+      <td>260.27</td>
+      <td>...</td>
+      <td>233.63</td>
+      <td>350.19</td>
+      <td>239.30</td>
+      <td>241.52</td>
+      <td>213.10</td>
+      <td>241.15</td>
+      <td>226.32</td>
+      <td>184.40</td>
+      <td>213.79</td>
+      <td>251.71</td>
+    </tr>
+    <tr>
+      <th>2022-12-28</th>
+      <td>266.04</td>
+      <td>316.44</td>
+      <td>212.71</td>
+      <td>256.82</td>
+      <td>276.97</td>
+      <td>225.13</td>
+      <td>239.62</td>
+      <td>206.86</td>
+      <td>212.20</td>
+      <td>256.62</td>
+      <td>...</td>
+      <td>237.98</td>
+      <td>348.81</td>
+      <td>243.23</td>
+      <td>238.31</td>
+      <td>212.25</td>
+      <td>233.59</td>
+      <td>236.23</td>
+      <td>186.87</td>
+      <td>211.93</td>
+      <td>249.90</td>
+    </tr>
+    <tr>
+      <th>2022-12-29</th>
+      <td>260.22</td>
+      <td>310.31</td>
+      <td>211.81</td>
+      <td>257.77</td>
+      <td>275.77</td>
+      <td>226.87</td>
+      <td>239.04</td>
+      <td>202.55</td>
+      <td>212.04</td>
+      <td>259.85</td>
+      <td>...</td>
+      <td>242.62</td>
+      <td>363.57</td>
+      <td>240.01</td>
+      <td>239.94</td>
+      <td>211.93</td>
+      <td>229.14</td>
+      <td>238.43</td>
+      <td>180.97</td>
+      <td>208.95</td>
+      <td>251.67</td>
+    </tr>
+    <tr>
+      <th>2022-12-30</th>
+      <td>262.65</td>
+      <td>308.94</td>
+      <td>211.09</td>
+      <td>265.15</td>
+      <td>276.65</td>
+      <td>226.59</td>
+      <td>243.48</td>
+      <td>202.23</td>
+      <td>214.07</td>
+      <td>262.42</td>
+      <td>...</td>
+      <td>237.68</td>
+      <td>372.17</td>
+      <td>242.60</td>
+      <td>239.73</td>
+      <td>205.42</td>
+      <td>229.94</td>
+      <td>237.87</td>
+      <td>183.23</td>
+      <td>213.77</td>
+      <td>249.60</td>
+    </tr>
+  </tbody>
+</table>
+<p>252 rows × 100 columns</p>
+</div></div></div>
+</div>
+<p>Below, we prefix the simulated price path column names with <code class="docutils literal notranslate"><span class="pre">_</span></code> to hide them from the legend.
+However, this feature triggers a warning <em>100 times</em>!
+We will suppress these 100 warnings with the warnings package.
+Generally, we should avoid suppressing warnings, however it is the easiest option here.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">with</span> <span class="n">warnings</span><span class="o">.</span><span class="n">catch_warnings</span><span class="p">():</span>
+    <span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
+    <span class="n">S_t</span><span class="o">.</span><span class="n">add_prefix</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">S_t</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Mean&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">aapl</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">S_t</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Adj Close&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Observed&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Price ($)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span>
+    <span class="s1">&#39;Apple Simulated and Observed Prices&#39;</span> <span class="o">+</span> 
+    <span class="sa">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Trained from </span><span class="si">{</span><span class="n">train</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s1">%Y-%m-%d</span><span class="si">}</span><span class="s1"> to </span><span class="si">{</span><span class="n">train</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s1">%Y-%m-%d</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/72b966d79a0e359e38ea7033254ccf1979dd347e703223a9ed6c6ddf877bdd54.png" src="_images/72b966d79a0e359e38ea7033254ccf1979dd347e703223a9ed6c6ddf877bdd54.png" />
+</div>
+</div>
+</section>
+<section id="pricing-options">
+<h3>Pricing Options<a class="headerlink" href="#pricing-options" title="Permalink to this heading">#</a></h3>
+<p>We can use simulated price paths to price options!
+We will use the Black and Scholes (1973) formula as a benchmark.
+Black and Scholes (1973) provide a closed form (analytic) solution to price European options.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">norm</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">price_bs</span><span class="p">(</span><span class="n">S_0</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;call&#39;</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Function used for calculating the price of European options using the analytical form of the Black-Scholes model.</span>
+<span class="sd">    </span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ------------</span>
+<span class="sd">    S_0 : float</span>
+<span class="sd">        Initial stock price</span>
+<span class="sd">    K : float</span>
+<span class="sd">        Strike price</span>
+<span class="sd">    T : float</span>
+<span class="sd">        Time to expiration in days</span>
+<span class="sd">    r : float</span>
+<span class="sd">        Daily risk-free rate</span>
+<span class="sd">    sigma : float</span>
+<span class="sd">        Standard deviation of daily stock returns</span>
+<span class="sd">    type : str</span>
+<span class="sd">        Type of the option. Allowable: [&#39;call&#39;, &#39;put&#39;]</span>
+<span class="sd">    </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -----------</span>
+<span class="sd">    option_premium : float</span>
+<span class="sd">        The premium on the option calculated using the Black-Scholes model</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    
+    <span class="n">d1</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">S_0</span> <span class="o">/</span> <span class="n">K</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">r</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">sigma</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">T</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">sigma</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">T</span><span class="p">))</span>
+    <span class="n">d2</span> <span class="o">=</span> <span class="n">d1</span> <span class="o">-</span> <span class="n">sigma</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="nb">type</span> <span class="o">==</span> <span class="s1">&#39;call&#39;</span><span class="p">:</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="p">(</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">d1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">S_0</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">d2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">K</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">r</span> <span class="o">*</span> <span class="n">T</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="nb">type</span> <span class="o">==</span> <span class="s1">&#39;put&#39;</span><span class="p">:</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="p">(</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="o">-</span><span class="n">d2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">K</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">r</span> <span class="o">*</span> <span class="n">T</span><span class="p">))</span> <span class="o">-</span> <span class="p">(</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="o">-</span><span class="n">d1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">S_0</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Wrong input for type!&#39;</span><span class="p">)</span>
+        
+    <span class="k">return</span> <span class="n">val</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can use the AAPL parameters above to price a European call option on AAPL stock.
+We will calculate its price at the end of 2021 with an expiration at the end of 2022, assuming a 5% risk-free rate.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S_0</span> <span class="o">=</span> <span class="n">train</span><span class="p">[</span><span class="s1">&#39;Adj Close&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">K</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">T</span> <span class="o">=</span> <span class="n">test</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">r</span> <span class="o">=</span> <span class="mf">0.05</span><span class="o">/</span><span class="mi">252</span>
+<span class="n">sigma</span> <span class="o">=</span> <span class="n">train</span><span class="p">[</span><span class="s1">&#39;Return&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">)</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S_0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>176.27622985839844
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">_</span> <span class="o">=</span> <span class="n">price_bs</span><span class="p">(</span>
+    <span class="n">S_0</span><span class="o">=</span><span class="n">S_0</span><span class="p">,</span>
+    <span class="n">K</span><span class="o">=</span><span class="n">K</span><span class="p">,</span>
+    <span class="n">T</span><span class="o">=</span><span class="n">T</span><span class="p">,</span>
+    <span class="n">r</span><span class="o">=</span><span class="n">r</span><span class="p">,</span>
+    <span class="n">sigma</span><span class="o">=</span><span class="n">sigma</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Black and Scholes (1973) option price: </span><span class="si">{</span><span class="n">_</span><span class="si">:</span><span class="s1">0.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Black and Scholes (1973) option price: 81.21
+</pre></div>
+</div>
+</div>
+</div>
+<p>To simulate the Black and Scholes (1973) option price, we must simulate AAPL prices with the same 5% risk-free rate as the drift.
+We will write a new helper function to use the same inputs as above.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">simulate_gbm_series</span><span class="p">(</span><span class="n">seed</span><span class="p">,</span> <span class="n">S_0</span><span class="o">=</span><span class="n">S_0</span><span class="p">,</span> <span class="n">T</span><span class="o">=</span><span class="n">T</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="n">r</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="n">sigma</span><span class="p">,</span> <span class="n">train</span><span class="o">=</span><span class="n">train</span><span class="p">,</span> <span class="n">test</span><span class="o">=</span><span class="n">test</span><span class="p">):</span>
+    <span class="n">S_t</span> <span class="o">=</span> <span class="n">simulate_gbm</span><span class="p">(</span>
+        <span class="n">S_0</span><span class="o">=</span><span class="n">S_0</span><span class="p">,</span>
+        <span class="n">mu</span><span class="o">=</span><span class="n">r</span><span class="p">,</span>
+        <span class="n">sigma</span><span class="o">=</span><span class="n">sigma</span><span class="p">,</span>
+        <span class="n">n_steps</span><span class="o">=</span><span class="n">T</span><span class="p">,</span>
+        <span class="n">seed</span><span class="o">=</span><span class="n">seed</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">S_t</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">test</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">train</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We will simulate more price paths to increase the precision of out option price.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">10_000</span>
+
+<span class="n">S_t</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span>
+    <span class="n">objs</span><span class="o">=</span><span class="p">[</span><span class="n">simulate_gbm_series</span><span class="p">(</span><span class="n">seed</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span> <span class="k">for</span> <span class="n">seed</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)],</span>
+    <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">keys</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">),</span>
+    <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Simulation&#39;</span><span class="p">]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S_t</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Simulation</th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+      <th>9</th>
+      <th>...</th>
+      <th>9990</th>
+      <th>9991</th>
+      <th>9992</th>
+      <th>9993</th>
+      <th>9994</th>
+      <th>9995</th>
+      <th>9996</th>
+      <th>9997</th>
+      <th>9998</th>
+      <th>9999</th>
+    </tr>
+    <tr>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2021-12-31</th>
+      <td>176.28</td>
+      <td>176.28</td>
+      <td>176.28</td>
+      <td>176.28</td>
+      <td>176.28</td>
+      <td>176.28</td>
+      <td>176.28</td>
+      <td>176.28</td>
+      <td>176.28</td>
+      <td>176.28</td>
+      <td>...</td>
+      <td>176.28</td>
+      <td>176.28</td>
+      <td>176.28</td>
+      <td>176.28</td>
+      <td>176.28</td>
+      <td>176.28</td>
+      <td>176.28</td>
+      <td>176.28</td>
+      <td>176.28</td>
+      <td>176.28</td>
+    </tr>
+    <tr>
+      <th>2022-01-03</th>
+      <td>181.27</td>
+      <td>180.87</td>
+      <td>175.13</td>
+      <td>181.34</td>
+      <td>176.43</td>
+      <td>177.52</td>
+      <td>175.42</td>
+      <td>181.06</td>
+      <td>176.54</td>
+      <td>176.29</td>
+      <td>...</td>
+      <td>178.14</td>
+      <td>175.95</td>
+      <td>174.19</td>
+      <td>173.95</td>
+      <td>172.99</td>
+      <td>172.26</td>
+      <td>173.57</td>
+      <td>176.58</td>
+      <td>177.60</td>
+      <td>174.86</td>
+    </tr>
+    <tr>
+      <th>2022-01-04</th>
+      <td>182.44</td>
+      <td>179.15</td>
+      <td>174.99</td>
+      <td>182.61</td>
+      <td>177.84</td>
+      <td>176.61</td>
+      <td>177.47</td>
+      <td>179.75</td>
+      <td>179.63</td>
+      <td>175.50</td>
+      <td>...</td>
+      <td>177.45</td>
+      <td>176.81</td>
+      <td>175.57</td>
+      <td>176.18</td>
+      <td>171.43</td>
+      <td>171.36</td>
+      <td>178.19</td>
+      <td>175.19</td>
+      <td>176.40</td>
+      <td>176.52</td>
+    </tr>
+    <tr>
+      <th>2022-01-05</th>
+      <td>185.30</td>
+      <td>177.67</td>
+      <td>169.19</td>
+      <td>182.91</td>
+      <td>175.08</td>
+      <td>183.54</td>
+      <td>178.09</td>
+      <td>179.85</td>
+      <td>174.20</td>
+      <td>172.44</td>
+      <td>...</td>
+      <td>180.20</td>
+      <td>175.37</td>
+      <td>176.23</td>
+      <td>174.00</td>
+      <td>167.70</td>
+      <td>169.66</td>
+      <td>180.88</td>
+      <td>175.69</td>
+      <td>176.73</td>
+      <td>176.66</td>
+    </tr>
+    <tr>
+      <th>2022-01-06</th>
+      <td>191.99</td>
+      <td>174.70</td>
+      <td>173.65</td>
+      <td>177.61</td>
+      <td>177.02</td>
+      <td>182.82</td>
+      <td>175.59</td>
+      <td>181.03</td>
+      <td>170.43</td>
+      <td>172.42</td>
+      <td>...</td>
+      <td>183.12</td>
+      <td>176.18</td>
+      <td>175.12</td>
+      <td>176.93</td>
+      <td>167.96</td>
+      <td>172.82</td>
+      <td>182.73</td>
+      <td>176.78</td>
+      <td>172.54</td>
+      <td>175.32</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2022-12-23</th>
+      <td>207.42</td>
+      <td>242.46</td>
+      <td>164.21</td>
+      <td>191.34</td>
+      <td>220.46</td>
+      <td>178.93</td>
+      <td>187.11</td>
+      <td>163.75</td>
+      <td>170.35</td>
+      <td>199.15</td>
+      <td>...</td>
+      <td>156.18</td>
+      <td>165.90</td>
+      <td>137.42</td>
+      <td>252.22</td>
+      <td>144.24</td>
+      <td>129.41</td>
+      <td>242.87</td>
+      <td>204.14</td>
+      <td>194.58</td>
+      <td>186.51</td>
+    </tr>
+    <tr>
+      <th>2022-12-27</th>
+      <td>211.01</td>
+      <td>240.78</td>
+      <td>165.21</td>
+      <td>197.72</td>
+      <td>219.43</td>
+      <td>178.22</td>
+      <td>184.40</td>
+      <td>162.25</td>
+      <td>167.33</td>
+      <td>204.00</td>
+      <td>...</td>
+      <td>160.32</td>
+      <td>164.82</td>
+      <td>138.60</td>
+      <td>255.43</td>
+      <td>145.55</td>
+      <td>133.71</td>
+      <td>241.07</td>
+      <td>205.05</td>
+      <td>187.88</td>
+      <td>192.04</td>
+    </tr>
+    <tr>
+      <th>2022-12-28</th>
+      <td>208.33</td>
+      <td>247.79</td>
+      <td>166.57</td>
+      <td>201.11</td>
+      <td>216.88</td>
+      <td>176.29</td>
+      <td>187.63</td>
+      <td>161.99</td>
+      <td>166.16</td>
+      <td>200.95</td>
+      <td>...</td>
+      <td>158.05</td>
+      <td>164.04</td>
+      <td>139.88</td>
+      <td>259.64</td>
+      <td>146.61</td>
+      <td>131.03</td>
+      <td>240.96</td>
+      <td>213.31</td>
+      <td>191.79</td>
+      <td>192.79</td>
+    </tr>
+    <tr>
+      <th>2022-12-29</th>
+      <td>203.57</td>
+      <td>242.75</td>
+      <td>165.70</td>
+      <td>201.65</td>
+      <td>215.73</td>
+      <td>177.48</td>
+      <td>187.00</td>
+      <td>158.45</td>
+      <td>165.87</td>
+      <td>203.28</td>
+      <td>...</td>
+      <td>156.62</td>
+      <td>164.92</td>
+      <td>139.07</td>
+      <td>262.25</td>
+      <td>144.18</td>
+      <td>128.91</td>
+      <td>242.47</td>
+      <td>217.28</td>
+      <td>187.56</td>
+      <td>189.87</td>
+    </tr>
+    <tr>
+      <th>2022-12-30</th>
+      <td>205.27</td>
+      <td>241.45</td>
+      <td>164.97</td>
+      <td>207.22</td>
+      <td>216.20</td>
+      <td>177.08</td>
+      <td>190.29</td>
+      <td>158.04</td>
+      <td>167.30</td>
+      <td>205.09</td>
+      <td>...</td>
+      <td>156.43</td>
+      <td>164.43</td>
+      <td>134.79</td>
+      <td>268.96</td>
+      <td>140.79</td>
+      <td>130.94</td>
+      <td>244.51</td>
+      <td>223.76</td>
+      <td>187.76</td>
+      <td>192.34</td>
+    </tr>
+  </tbody>
+</table>
+<p>252 rows × 10000 columns</p>
+</div></div></div>
+</div>
+<p>We can compare this price to a simulated price.
+The payoff on the call option is $S_T - K$ or $0$, whichever is higher.
+The price of the option is the present value of the mean payoff, discounted at the risk-free rate.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">payoff</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="n">S_t</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">K</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">payoff</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">r</span> <span class="o">*</span> <span class="n">T</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Simulated option price: </span><span class="si">{</span><span class="n">_</span><span class="si">:</span><span class="s1">0.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Simulated option price: 81.92
+</pre></div>
+</div>
+</div>
+</div>
+<p>The option prices do not match exactly.
+However, we can simulate more price paths to bring our simulated option price closer to the analytic solution.</p>
+</section>
+</section>
+<section id="estimating-value-at-risk-using-monte-carlo">
+<h2>Estimating Value-at-Risk using Monte Carlo<a class="headerlink" href="#estimating-value-at-risk-using-monte-carlo" title="Permalink to this heading">#</a></h2>
+<p>Value-at-Risk (VaR) measures the risk associated with a portfolio
+VaR reports the worst expected loss, at a given level of confidence, over a certain horizon under normal market conditions.
+For example, say the 1-day 95% VaR of our portfolio is $100.
+This implies that that 95% of the time (under normal market conditions), we should not lose more than \$100 over one day.
+We typically present VaR as a positive value, so a VaR of $100 implies a loss of less than $100.</p>
+<p>We can calculate VaR several ways, including:</p>
+<ul class="simple">
+<li><p>Parametric Approach (Variance-Covariance)</p></li>
+<li><p>Historical Simulation Approach</p></li>
+<li><p>Monte Carlo simulations</p></li>
+</ul>
+<p>We only consider the last method to calculate the 1-day VaR of an portfolio of 20 shares each of META and GOOG.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tickers</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;GOOG&#39;</span><span class="p">,</span> <span class="s1">&#39;META&#39;</span><span class="p">]</span>
+<span class="n">shares</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">])</span>
+<span class="n">T</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">n_sims</span> <span class="o">=</span> <span class="mi">10_000</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>However, we will download all data from Yahoo! Finance and subset our data later.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">yf</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="n">tickers</span><span class="o">=</span><span class="n">tickers</span><span class="p">,</span> <span class="n">progress</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">assign</span><span class="p">(</span>
+        <span class="n">Date</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">tz_localize</span><span class="p">(</span><span class="kc">None</span><span class="p">),</span>
+    <span class="p">)</span>
+    <span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;Date&#39;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">rename_axis</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Variable&#39;</span><span class="p">,</span> <span class="s1">&#39;Ticker&#39;</span><span class="p">])</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next, we calculate daily returns during 2022.
+Choosing the window to define “normal market conditions” is part art, part science, and beyod the scope of this lecture notebook.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">returns</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Adj Close&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">pct_change</span><span class="p">()</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2022&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">returns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Ticker</th>
+      <th>GOOG</th>
+      <th>META</th>
+    </tr>
+    <tr>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2022-01-03</th>
+      <td>0.00</td>
+      <td>0.01</td>
+    </tr>
+    <tr>
+      <th>2022-01-04</th>
+      <td>-0.00</td>
+      <td>-0.01</td>
+    </tr>
+    <tr>
+      <th>2022-01-05</th>
+      <td>-0.05</td>
+      <td>-0.04</td>
+    </tr>
+    <tr>
+      <th>2022-01-06</th>
+      <td>-0.00</td>
+      <td>0.03</td>
+    </tr>
+    <tr>
+      <th>2022-01-07</th>
+      <td>-0.00</td>
+      <td>-0.00</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2022-12-23</th>
+      <td>0.02</td>
+      <td>0.01</td>
+    </tr>
+    <tr>
+      <th>2022-12-27</th>
+      <td>-0.02</td>
+      <td>-0.01</td>
+    </tr>
+    <tr>
+      <th>2022-12-28</th>
+      <td>-0.02</td>
+      <td>-0.01</td>
+    </tr>
+    <tr>
+      <th>2022-12-29</th>
+      <td>0.03</td>
+      <td>0.04</td>
+    </tr>
+    <tr>
+      <th>2022-12-30</th>
+      <td>-0.00</td>
+      <td>0.00</td>
+    </tr>
+  </tbody>
+</table>
+<p>251 rows × 2 columns</p>
+</div></div></div>
+</div>
+<p>We will need the variance-covariance matrix.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cov_mat</span> <span class="o">=</span> <span class="n">returns</span><span class="o">.</span><span class="n">cov</span><span class="p">()</span>
+
+<span class="n">cov_mat</span> <span class="o">*</span> <span class="mi">1_000_000</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Ticker</th>
+      <th>GOOG</th>
+      <th>META</th>
+    </tr>
+    <tr>
+      <th>Ticker</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>GOOG</th>
+      <td>596.48</td>
+      <td>674.26</td>
+    </tr>
+    <tr>
+      <th>META</th>
+      <td>674.26</td>
+      <td>1638.50</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>We will use the variance-covariance matrix to calculate the Cholesky decomposition.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chol_mat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">cholesky</span><span class="p">(</span><span class="n">cov_mat</span><span class="p">)</span>
+
+<span class="n">chol_mat</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.02, 0.  ],
+       [0.03, 0.03]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>The Cholesky decomposition helps us generate random variables with the same variance and covariance as the observed data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rv</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">n_sims</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tickers</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">correlated_rv</span> <span class="o">=</span> <span class="p">(</span><span class="n">chol_mat</span> <span class="o">@</span> <span class="n">rv</span><span class="o">.</span><span class="n">T</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">correlated_rv</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 0.04,  0.05],
+       [ 0.02,  0.02],
+       [-0.02, -0.04],
+       ...,
+       [-0.04,  0.01],
+       [-0.  , -0.09],
+       [-0.02,  0.  ]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>These random variables have a variance-covariance matrix similar to the real data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">cov</span><span class="p">(</span><span class="n">correlated_rv</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>  <span class="o">*</span> <span class="mi">1_000_000</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 597.18,  685.37],
+       [ 685.37, 1647.31]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">cov_mat</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">cov</span><span class="p">(</span><span class="n">correlated_rv</span><span class="o">.</span><span class="n">T</span><span class="p">),</span> <span class="n">rtol</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">correlated_rv</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.02, 0.02])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">returns</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">values</span> <span class="o">*</span> <span class="mi">100</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-0.16, -0.32])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here are the parameters for the simulated price paths:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mu</span> <span class="o">=</span> <span class="n">returns</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">values</span>
+<span class="n">sigma</span> <span class="o">=</span> <span class="n">returns</span><span class="o">.</span><span class="n">std</span><span class="p">()</span><span class="o">.</span><span class="n">values</span>
+<span class="n">S_0</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2021&#39;</span><span class="p">,</span> <span class="s1">&#39;Adj Close&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<span class="n">P_0</span> <span class="o">=</span> <span class="n">S_0</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">shares</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Calculate terminal prices using the GBM formula above:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S_T</span> <span class="o">=</span> <span class="n">S_0</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">((</span><span class="n">r</span> <span class="o">-</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">sigma</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">T</span> <span class="o">+</span> <span class="n">sigma</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">T</span><span class="p">)</span> <span class="o">*</span> <span class="n">correlated_rv</span><span class="p">)</span>
+
+<span class="n">S_T</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[144.79, 336.82],
+       [144.74, 336.38],
+       [144.61, 335.63],
+       ...,
+       [144.53, 336.3 ],
+       [144.65, 334.95],
+       [144.6 , 336.2 ]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Calculate terminal portfolio values and returns.
+Note that these are dollar values, since VaR is typically expressed in dollar values.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">P_T</span> <span class="o">=</span> <span class="n">S_T</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">shares</span><span class="p">)</span>
+
+<span class="n">P_T</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([9632.23, 9622.51, 9604.65, ..., 9616.48, 9592.05, 9615.98])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">P_diff</span> <span class="o">=</span> <span class="n">P_T</span> <span class="o">-</span> <span class="n">P_0</span>
+
+<span class="n">P_diff</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 11.64,   1.92, -15.94, ...,  -4.11, -28.54,  -4.61])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">P_diff</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-4.376750155672959
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next, we calculate VaR.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">percentiles</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">]</span>
+<span class="n">var</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">P_diff</span><span class="p">,</span> <span class="n">percentiles</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">percentiles</span><span class="p">,</span> <span class="n">var</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;1-day VaR with </span><span class="si">{</span><span class="mi">100</span><span class="o">-</span><span class="n">x</span><span class="si">}</span><span class="s1">% confidence: $</span><span class="si">{</span><span class="o">-</span><span class="n">y</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1-day VaR with 99.99% confidence: $48.02
+1-day VaR with 99.95% confidence: $44.65
+1-day VaR with 99.9% confidence: $42.63
+</pre></div>
+</div>
+</div>
+</div>
+<p>Finally, we will plot VaR:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">P_diff</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Distribution of 1-Day Changes in Portfolio Value</span><span class="se">\n</span><span class="s1"> from </span><span class="si">{</span><span class="n">n_sims</span><span class="si">}</span><span class="s1"> Simulations&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="s1">&#39;99% 1-Day VaR&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;top&#39;</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">get_xaxis_transform</span><span class="p">())</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Density&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;1-Day Change in Portfolio Value ($)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/bf986aec5eb57850436872d90b758d098940c93b27c249ef2621ab4d88d9af03.png" src="_images/bf986aec5eb57850436872d90b758d098940c93b27c249ef2621ab4d88d9af03.png" />
+</div>
+</div>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="herron_04_practice_02.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Herron Topic 4 - Practice (Wednesday 2:45 PM, Section 2)</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="herron_05_practice.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Herron Topic 5 - Practice (Blank)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#option-pricing">Option Pricing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simulating-stock-prices">Simulating Stock Prices</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pricing-options">Pricing Options</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimating-value-at-risk-using-monte-carlo">Estimating Value-at-Risk using Monte Carlo</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Richard Herron
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
