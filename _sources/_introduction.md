@@ -11,7 +11,7 @@ This website renders our notebooks and offers several ways to interact:
 1. Download them by clicking the down arrow in the upper-right corner of each page
 1. Visit their GitHub repository by clicking the cat in the upper-right corner of each page
 
-This GitHub repository (<https://github.com/dmsb-fina-6333/2023-spring>) also generates this website.
+This GitHub repository (<https://github.com/richard-herron/fina-6333-2023-spring>) also generates this website.
 If GitHub intimidates you, you can ignore our GitHub repository and download our notebooks one at a time, as I describe above in option 1.
 If GitHub does not intimidate you, you can use our GitHub repository in a few ways:
 
