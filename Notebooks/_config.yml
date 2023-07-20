@@ -11,9 +11,9 @@ parse:
   myst_enable_extensions:
     - amsmath
 
-# html:
-#   use_repository_button: true
-#   use_issues_button: true
+html:
+  use_repository_button: true
+  use_issues_button: true
 
 bibtex_bibfiles: 
   - references.bib
@@ -21,7 +21,7 @@ bibtex_bibfiles:
 launch_buttons:
   notebook_interface: jupyterlab
 
-# repository:
-#   url: https://github.com/dmsb-fina-6333/2023-spring
-#   path_to_book: Notebooks
-#   branch: main
+repository:
+  url: https://github.com/richard-herron/fina-6333-2023-spring
+  path_to_book: Notebooks
+  branch: main
