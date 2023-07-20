@@ -1,0 +1,101 @@
+format: jb-book
+root: _introduction
+parts:
+  - caption: Lectures and Practice
+    chapters:
+    - file: mckinney_02_lecture
+      sections:
+      - file: mckinney_02_practice
+      - file: mckinney_02_practice_03
+      - file: mckinney_02_practice_04
+      - file: mckinney_02_practice_02
+    - file: mckinney_03_lecture
+      sections:
+      - file: mckinney_03_practice
+      - file: mckinney_03_practice_04
+      - file: mckinney_03_practice_02
+    - file: mckinney_04_lecture
+      sections:
+      - file: mckinney_04_practice
+      - file: mckinney_04_practice_03
+      - file: mckinney_04_practice_04
+      - file: mckinney_04_practice_02
+    - file: mckinney_05_lecture
+      sections:
+      - file: mckinney_05_practice
+      - file: mckinney_05_practice_03
+      - file: mckinney_05_practice_04
+      - file: mckinney_05_practice_02
+    - file: herron_01_lecture
+      sections:
+      - file: herron_01_practice
+      - file: herron_01_practice_03
+      - file: herron_01_practice_04
+      - file: herron_01_practice_02
+    - file: mckinney_08_lecture
+      sections:
+      - file: mckinney_08_practice
+      - file: mckinney_08_practice_03
+      - file: mckinney_08_practice_04
+      - file: mckinney_08_practice_02
+    - file: mckinney_10_lecture
+      sections:
+      - file: mckinney_10_practice
+      - file: mckinney_10_practice_all
+    - file: mckinney_11_lecture
+      sections:
+      - file: mckinney_11_practice
+      - file: mckinney_11_practice_03
+      - file: mckinney_11_practice_04
+      - file: mckinney_11_practice_02
+    - file: herron_02_lecture
+      sections:
+      - file: herron_02_practice
+      - file: herron_02_practice_03
+      - file: herron_02_practice_04
+      - file: herron_02_practice_02
+    - file: herron_03_lecture
+      sections:
+      - file: herron_03_practice
+      - file: herron_03_practice_03
+      - file: herron_03_practice_04
+      - file: herron_03_practice_02
+    - file: herron_04_lecture
+      sections:
+      - file: herron_04_practice
+      - file: herron_04_practice_03
+      - file: herron_04_practice_04
+      - file: herron_04_practice_02
+    - file: herron_05_lecture
+      sections:
+      - file: herron_05_practice
+      - file: herron_05_practice_03
+      - file: herron_05_practice_04
+      - file: herron_05_practice_02
+    - file: herron_06_lecture
+      sections:
+      - file: herron_06_practice
+      - file: herron_06_practice_03
+      - file: herron_06_practice_04
+      - file: herron_06_practice_02
+    - file: herron_07_lecture
+      sections:
+      - file: herron_07_practice
+      - file: herron_07_practice_03
+      - file: herron_07_practice_04
+      - file: herron_07_practice_02
+  - caption: Quizzes
+    chapters:
+    - file: quiz_01
+    - file: quiz_02
+    - file: quiz_03
+    - file: quiz_04
+    - file: quiz_05
+    - file: quiz_06
+    - file: quiz_07
+  - caption: Projects
+    chapters:
+    - file: project_01
+      sections: 
+      - file: project_01_solution
+    - file: project_02

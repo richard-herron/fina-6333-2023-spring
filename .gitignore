@@ -1,0 +1,17 @@
+/Assessment
+/Canvas
+/Data
+/DataCamp
+/Grades
+# /Notebooks
+/Office\ Hours
+/Participation
+/Projects
+/Quizzes
+/Research\ Computing
+/Syllabus
+*.csv
+*.txt
+*.zip
+*.xlsx
+*.sqlite

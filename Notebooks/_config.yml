@@ -1,0 +1,27 @@
+title: FINA 6333 
+subtitle: Spring 2023
+author: Richard Herron
+logo: DMSB_100th_LogoMark_CMYK_Horiz.jpg
+only_build_toc_files: true
+
+execute:
+  execute_notebooks: false
+
+parse:
+  myst_enable_extensions:
+    - amsmath
+
+# html:
+#   use_repository_button: true
+#   use_issues_button: true
+
+bibtex_bibfiles: 
+  - references.bib
+
+launch_buttons:
+  notebook_interface: jupyterlab
+
+# repository:
+#   url: https://github.com/dmsb-fina-6333/2023-spring
+#   path_to_book: Notebooks
+#   branch: main

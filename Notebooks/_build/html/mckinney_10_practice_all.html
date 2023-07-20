@@ -1,0 +1,2002 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>McKinney Chapter 10 - Practice (All Sections) &#8212; FINA 6333</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'mckinney_10_practice_all';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="McKinney Chapter 11 - Time Series" href="mckinney_11_lecture.html" />
+    <link rel="prev" title="McKinney Chapter 10 - Practice (Blank)" href="mckinney_10_practice.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="_introduction.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/DMSB_100th_LogoMark_CMYK_Horiz.jpg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/DMSB_100th_LogoMark_CMYK_Horiz.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="_introduction.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lectures and Practice</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="mckinney_02_lecture.html">McKinney Chapter 2 - Python Language Basics, IPython, and Jupyter Notebooks</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_02_practice.html">McKinney Chapter 2 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_02_practice_03.html">McKinney Chapter 2 - Practice (Section 3, Monday 2:45 PM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_02_practice_04.html">McKinney Chapter 2 - Practice (Section 4, Wednesday 11:45 AM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_02_practice_02.html">McKinney Chapter 2 - Practice (Section 2, Wednesday 2:45 PM)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="mckinney_03_lecture.html">McKinney Chapter 3 - Built-In Data Structures, Functions, and Files</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_03_practice.html">McKinney Chapter 3 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_03_practice_04.html">McKinney Chapter 3 - Practice (Section 4, Wednesday 11:45 AM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_03_practice_02.html">McKinney Chapter 3 - Practice (Section 2, Wednesday 2:45 PM)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="mckinney_04_lecture.html">McKinney Chapter 4 - NumPy Basics: Arrays and Vectorized Computation</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_04_practice.html">McKinney Chapter 4 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_04_practice_03.html">McKinney Chapter 4 - Practice (Section 3, Monday 2:45 PM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_04_practice_04.html">McKinney Chapter 4 - Practice (Section 4, Wednesday 11:45 AM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_04_practice_02.html">McKinney Chapter 4 - Practice (Section 2, Wednesday 2:45 PM)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="mckinney_05_lecture.html">McKinney Chapter 5 - Getting Started with pandas</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_05_practice.html">McKinney Chapter 5 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_05_practice_03.html">McKinney Chapter 5 - Practice (Section 3, Monday 2:45 PM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_05_practice_04.html">McKinney Chapter 5 - Practice (Section 4, Wednesday 11:45 AM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_05_practice_02.html">McKinney Chapter 5 - Practice (Section 2, Wednesday 2:45 PM)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="herron_01_lecture.html">Herron Topic 1 - Web Data, Log and Simple Returns, and Portfolio Math</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="herron_01_practice.html">Herron Topic 1 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_01_practice_03.html">Herron Topic 1 - Practice (Section 3, Monday 2:45 PM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_01_practice_04.html">Herron Topic 1 - Practice (Section 4, Wednesday 11:45 AM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_01_practice_02.html">Herron Topic 1 - Practice (Section 2, Wednesday 2:45 PM)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="mckinney_08_lecture.html">McKinney Chapter 8 - Data Wrangling: Join, Combine, and Reshape</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_08_practice.html">McKinney Chapter 8 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_08_practice_03.html">McKinney Chapter 8 - Practice (Monday 2:45 PM, Section 3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_08_practice_04.html">McKinney Chapter 8 - Practice (Wednesday 11:45 AM, Section 4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_08_practice_02.html">McKinney Chapter 8 - Practice (Wednesday 2:45 PM, Section 2)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="mckinney_10_lecture.html">McKinney Chapter 10 - Data Aggregation and Group Operations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="mckinney_10_practice.html">McKinney Chapter 10 - Practice (Blank)</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">McKinney Chapter 10 - Practice (All Sections)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="mckinney_11_lecture.html">McKinney Chapter 11 - Time Series</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_11_practice.html">McKinney Chapter 11 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_11_practice_03.html">McKinney Chapter 11 - Practice (Monday 2:45 PM, Section 3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_11_practice_04.html">McKinney Chapter 11 - Practice (Wednesday 11:45 AM, Section 4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mckinney_11_practice_02.html">McKinney Chapter 11 - Practice (Wednesday 2:45 PM, Section 2)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="herron_02_lecture.html">Herron Topic 2 - Trading Strategies</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="herron_02_practice.html">Herron Topic 2 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_02_practice_03.html">Herron Topic 2 - Practice (Monday 2:45 PM, Section 3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_02_practice_04.html">Herron Topic 2 - Practice (Monday 11:45 AM, Section 4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_02_practice_02.html">Herron Topic 2 - Practice (Wednesday 2:45 PM, Section 2)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="herron_03_lecture.html">Herron Topic 3 - Multifactor Models</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="herron_03_practice.html">Herron Topic 3 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_03_practice_03.html">Herron Topic 3 - Practice (Monday 2:45 PM, Section 3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_03_practice_04.html">Herron Topic 3 - Practice (Monday 11:45 AM, Section 4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_03_practice_02.html">Herron Topic 3 - Practice (Wednesday 2:45 PM, Section 2)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="herron_04_lecture.html">Herron Topic 4 - Portfolio Optimization</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="herron_04_practice.html">Herron Topic 4 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_04_practice_03.html">Herron Topic 4 - Practice (Monday 2:45 PM, Section 3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_04_practice_04.html">Herron Topic 4 - Practice (Wednesday 11:45 AM, Section 4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_04_practice_02.html">Herron Topic 4 - Practice (Wednesday 2:45 PM, Section 2)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="herron_05_lecture.html">Herron Topic 5 - Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="herron_05_practice.html">Herron Topic 5 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_05_practice_03.html">Herron Topic 5 - Practice (Monday 2:45 PM, Section 3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_05_practice_04.html">Herron Topic 5 - Practice (Wednesday 11:45 AM, Section 4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_05_practice_02.html">Herron Topic 5 - Practice (Wednesday 2:45 PM, Section 2)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="herron_06_lecture.html">Herron Topic 6 - Size, Value, and Momentum Investing</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="herron_06_practice.html">Herron Topic 6 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_06_practice_03.html">Herron Topic 6 - Practice (Monday 2:45 PM, Section 3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_06_practice_04.html">Herron Topic 6 - Practice (Wednesday 11:45 AM, Section 4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_06_practice_02.html">Herron Topic 6 - Practice (Wednesday 2:45 PM, Section 2)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="herron_07_lecture.html">Herron Topic 7 - Five Stylized Facts of Asset Returns</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="herron_07_practice.html">Herron Topic 7 - Practice (Blank)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_07_practice_03.html">Herron Topic 7 - Practice (Monday 2:45 PM, Section 3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_07_practice_04.html">Herron Topic 7 - Practice (Wednesday 11:45 AM, Section 4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="herron_07_practice_02.html">Herron Topic 7 - Practice (Wednesday 2:45 PM, Section 2)</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quizzes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="quiz_01.html">Quiz 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quiz_02.html">Quiz 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quiz_03.html">Quiz 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quiz_04.html">Quiz 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quiz_05.html">Quiz 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quiz_06.html">Quiz 6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quiz_07.html">Quiz 7</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Projects</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="project_01.html">Project 1</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="project_01_solution.html">Project 1 Solution</a></li>
+
+
+
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="project_02.html">Project 2</a></li>
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/mckinney_10_practice_all.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>McKinney Chapter 10 - Practice (All Sections)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#announcements">Announcements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practice">Practice</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#replicate-the-following-pivot-table-output-with-groupby">Replicate the following <code class="docutils literal notranslate"><span class="pre">.pivot_table()</span></code> output with <code class="docutils literal notranslate"><span class="pre">.groupby()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calulate-the-mean-and-standard-deviation-of-returns-by-ticker-for-the-matana-msft-aapl-tsla-amzn-nvda-and-goog-stocks">Calulate the mean and standard deviation of returns by ticker for the MATANA (MSFT, AAPL, TSLA, AMZN, NVDA, and GOOG) stocks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-the-mean-and-standard-deviation-of-returns-and-the-maximum-of-closing-prices-by-ticker-for-the-matana-stocks">Calculate the mean and standard deviation of returns and the maximum of closing prices by ticker for the MATANA stocks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-monthly-means-and-volatilities-for-spy-and-goog-returns">Calculate monthly means and volatilities for SPY and GOOG returns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-the-monthly-means-and-volatilities-from-the-previous-exercise">Plot the monthly means and volatilities from the previous exercise</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assign-the-dow-jones-stocks-to-five-portfolios-based-on-their-monthly-volatility">Assign the Dow Jones stocks to five portfolios based on their monthly volatility</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-the-time-series-volatilities-of-these-five-portfolios">Plot the time-series volatilities of these five portfolios</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-the-mean-monthly-correlation-between-the-dow-jones-stocks">Calculate the <em>mean</em> monthly correlation between the Dow Jones stocks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#is-market-volatility-higher-during-wars">Is market volatility higher during wars?</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="mckinney-chapter-10-practice-all-sections">
+<h1>McKinney Chapter 10 - Practice (All Sections)<a class="headerlink" href="#mckinney-chapter-10-practice-all-sections" title="Permalink to this heading">#</a></h1>
+<section id="announcements">
+<h2>Announcements<a class="headerlink" href="#announcements" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="practice">
+<h2>Practice<a class="headerlink" href="#practice" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">config</span> InlineBackend.figure_format = &#39;retina&#39;
+<span class="o">%</span><span class="k">precision</span> 4
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">float_format</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{:.4f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">yfinance</span> <span class="k">as</span> <span class="nn">yf</span>
+<span class="kn">import</span> <span class="nn">pandas_datareader</span> <span class="k">as</span> <span class="nn">pdr</span>
+<span class="kn">import</span> <span class="nn">requests_cache</span>
+<span class="n">session</span> <span class="o">=</span> <span class="n">requests_cache</span><span class="o">.</span><span class="n">CachedSession</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="replicate-the-following-pivot-table-output-with-groupby">
+<h3>Replicate the following <code class="docutils literal notranslate"><span class="pre">.pivot_table()</span></code> output with <code class="docutils literal notranslate"><span class="pre">.groupby()</span></code><a class="headerlink" href="#replicate-the-following-pivot-table-output-with-groupby" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ind</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">yf</span><span class="o">.</span><span class="n">download</span><span class="p">(</span>
+        <span class="n">tickers</span><span class="o">=</span><span class="s1">&#39;^GSPC ^DJI ^IXIC ^FTSE ^N225 ^HSI&#39;</span><span class="p">,</span>
+        <span class="n">progress</span><span class="o">=</span><span class="kc">False</span>
+    <span class="p">)</span>
+    <span class="o">.</span><span class="n">rename_axis</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Variable&#39;</span><span class="p">,</span> <span class="s1">&#39;Index&#39;</span><span class="p">])</span>
+    <span class="o">.</span><span class="n">stack</span><span class="p">()</span>
+<span class="p">)</span>
+
+<span class="n">ind</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Variable</th>
+      <th>Adj Close</th>
+      <th>Close</th>
+      <th>High</th>
+      <th>Low</th>
+      <th>Open</th>
+      <th>Volume</th>
+    </tr>
+    <tr>
+      <th>Date</th>
+      <th>Index</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1927-12-30 05:00:00+00:00</th>
+      <th>^GSPC</th>
+      <td>17.6600</td>
+      <td>17.6600</td>
+      <td>17.6600</td>
+      <td>17.6600</td>
+      <td>17.6600</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>1928-01-03 05:00:00+00:00</th>
+      <th>^GSPC</th>
+      <td>17.7600</td>
+      <td>17.7600</td>
+      <td>17.7600</td>
+      <td>17.7600</td>
+      <td>17.7600</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>1928-01-04 05:00:00+00:00</th>
+      <th>^GSPC</th>
+      <td>17.7200</td>
+      <td>17.7200</td>
+      <td>17.7200</td>
+      <td>17.7200</td>
+      <td>17.7200</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>1928-01-05 05:00:00+00:00</th>
+      <th>^GSPC</th>
+      <td>17.5500</td>
+      <td>17.5500</td>
+      <td>17.5500</td>
+      <td>17.5500</td>
+      <td>17.5500</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>1928-01-06 05:00:00+00:00</th>
+      <th>^GSPC</th>
+      <td>17.6600</td>
+      <td>17.6600</td>
+      <td>17.6600</td>
+      <td>17.6600</td>
+      <td>17.6600</td>
+      <td>0.0000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">ind</span>
+    <span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2015&#39;</span><span class="p">:]</span>
+    <span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+    <span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span>
+        <span class="n">values</span><span class="o">=</span><span class="s1">&#39;Close&#39;</span><span class="p">,</span>
+        <span class="n">index</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">Grouper</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="s1">&#39;Date&#39;</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;A&#39;</span><span class="p">),</span>
+        <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;Index&#39;</span><span class="p">,</span>
+        <span class="n">aggfunc</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;min&#39;</span><span class="p">,</span> <span class="s1">&#39;max&#39;</span><span class="p">]</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+
+    .dataframe thead tr:last-of-type th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th colspan="6" halign="left">min</th>
+      <th colspan="6" halign="left">max</th>
+    </tr>
+    <tr>
+      <th>Index</th>
+      <th>^DJI</th>
+      <th>^FTSE</th>
+      <th>^GSPC</th>
+      <th>^HSI</th>
+      <th>^IXIC</th>
+      <th>^N225</th>
+      <th>^DJI</th>
+      <th>^FTSE</th>
+      <th>^GSPC</th>
+      <th>^HSI</th>
+      <th>^IXIC</th>
+      <th>^N225</th>
+    </tr>
+    <tr>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2015-12-31 00:00:00+00:00</th>
+      <td>15666.4404</td>
+      <td>5874.1001</td>
+      <td>1867.6100</td>
+      <td>20556.5996</td>
+      <td>4506.4902</td>
+      <td>16795.9609</td>
+      <td>18312.3906</td>
+      <td>7104.0000</td>
+      <td>2130.8201</td>
+      <td>28442.7500</td>
+      <td>5218.8599</td>
+      <td>20868.0293</td>
+    </tr>
+    <tr>
+      <th>2016-12-31 00:00:00+00:00</th>
+      <td>15660.1797</td>
+      <td>5537.0000</td>
+      <td>1829.0800</td>
+      <td>18319.5801</td>
+      <td>4266.8398</td>
+      <td>14952.0195</td>
+      <td>19974.6191</td>
+      <td>7142.7998</td>
+      <td>2271.7200</td>
+      <td>24099.6992</td>
+      <td>5487.4399</td>
+      <td>19494.5293</td>
+    </tr>
+    <tr>
+      <th>2017-12-31 00:00:00+00:00</th>
+      <td>19732.4004</td>
+      <td>7099.2002</td>
+      <td>2257.8301</td>
+      <td>22134.4707</td>
+      <td>5429.0801</td>
+      <td>18335.6309</td>
+      <td>24837.5098</td>
+      <td>7687.7998</td>
+      <td>2690.1599</td>
+      <td>30003.4902</td>
+      <td>6994.7598</td>
+      <td>22939.1797</td>
+    </tr>
+    <tr>
+      <th>2018-12-31 00:00:00+00:00</th>
+      <td>21792.1992</td>
+      <td>6584.7002</td>
+      <td>2351.1001</td>
+      <td>24585.5293</td>
+      <td>6192.9199</td>
+      <td>19155.7402</td>
+      <td>26828.3906</td>
+      <td>7877.5000</td>
+      <td>2930.7500</td>
+      <td>33154.1211</td>
+      <td>8109.6899</td>
+      <td>24270.6191</td>
+    </tr>
+    <tr>
+      <th>2019-12-31 00:00:00+00:00</th>
+      <td>22686.2207</td>
+      <td>6692.7002</td>
+      <td>2447.8899</td>
+      <td>25064.3594</td>
+      <td>6463.5000</td>
+      <td>19561.9609</td>
+      <td>28645.2598</td>
+      <td>7686.6001</td>
+      <td>3240.0200</td>
+      <td>30157.4902</td>
+      <td>9022.3896</td>
+      <td>24066.1191</td>
+    </tr>
+    <tr>
+      <th>2020-12-31 00:00:00+00:00</th>
+      <td>18591.9297</td>
+      <td>4993.8999</td>
+      <td>2237.3999</td>
+      <td>21696.1309</td>
+      <td>6860.6699</td>
+      <td>16552.8301</td>
+      <td>30606.4805</td>
+      <td>7674.6001</td>
+      <td>3756.0701</td>
+      <td>29056.4199</td>
+      <td>12899.4199</td>
+      <td>27568.1504</td>
+    </tr>
+    <tr>
+      <th>2021-12-31 00:00:00+00:00</th>
+      <td>29982.6191</td>
+      <td>6407.5000</td>
+      <td>3700.6499</td>
+      <td>22744.8594</td>
+      <td>12609.1602</td>
+      <td>27013.2500</td>
+      <td>36488.6289</td>
+      <td>7420.7002</td>
+      <td>4793.0601</td>
+      <td>31084.9395</td>
+      <td>16057.4404</td>
+      <td>30670.0996</td>
+    </tr>
+    <tr>
+      <th>2022-12-31 00:00:00+00:00</th>
+      <td>28725.5098</td>
+      <td>6826.2002</td>
+      <td>3577.0300</td>
+      <td>14687.0195</td>
+      <td>10213.2900</td>
+      <td>24717.5293</td>
+      <td>36799.6484</td>
+      <td>7672.3999</td>
+      <td>4796.5601</td>
+      <td>24965.5508</td>
+      <td>15832.7998</td>
+      <td>29332.1602</td>
+    </tr>
+    <tr>
+      <th>2023-12-31 00:00:00+00:00</th>
+      <td>32930.0781</td>
+      <td>7554.1001</td>
+      <td>3808.1001</td>
+      <td>20145.2891</td>
+      <td>10305.2402</td>
+      <td>25716.8594</td>
+      <td>34302.6094</td>
+      <td>8014.2998</td>
+      <td>4179.7598</td>
+      <td>22688.9004</td>
+      <td>12200.8203</td>
+      <td>27696.4395</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Here is the <code class="docutils literal notranslate"><span class="pre">.groupby()</span></code> solution!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">ind</span>
+    <span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2015&#39;</span><span class="p">:,</span> <span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">]]</span>
+    <span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="s1">&#39;Index&#39;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="n">pd</span><span class="o">.</span><span class="n">Grouper</span><span class="p">(</span><span class="n">freq</span><span class="o">=</span><span class="s1">&#39;A&#39;</span><span class="p">),</span> <span class="s1">&#39;Index&#39;</span><span class="p">])</span>
+    <span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="s1">&#39;min&#39;</span><span class="p">,</span> <span class="s1">&#39;max&#39;</span><span class="p">])</span>
+    <span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">]</span>
+    <span class="o">.</span><span class="n">unstack</span><span class="p">()</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+
+    .dataframe thead tr:last-of-type th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th colspan="6" halign="left">min</th>
+      <th colspan="6" halign="left">max</th>
+    </tr>
+    <tr>
+      <th>Index</th>
+      <th>^DJI</th>
+      <th>^FTSE</th>
+      <th>^GSPC</th>
+      <th>^HSI</th>
+      <th>^IXIC</th>
+      <th>^N225</th>
+      <th>^DJI</th>
+      <th>^FTSE</th>
+      <th>^GSPC</th>
+      <th>^HSI</th>
+      <th>^IXIC</th>
+      <th>^N225</th>
+    </tr>
+    <tr>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2015-12-31 00:00:00+00:00</th>
+      <td>15666.4404</td>
+      <td>5874.1001</td>
+      <td>1867.6100</td>
+      <td>20556.5996</td>
+      <td>4506.4902</td>
+      <td>16795.9609</td>
+      <td>18312.3906</td>
+      <td>7104.0000</td>
+      <td>2130.8201</td>
+      <td>28442.7500</td>
+      <td>5218.8599</td>
+      <td>20868.0293</td>
+    </tr>
+    <tr>
+      <th>2016-12-31 00:00:00+00:00</th>
+      <td>15660.1797</td>
+      <td>5537.0000</td>
+      <td>1829.0800</td>
+      <td>18319.5801</td>
+      <td>4266.8398</td>
+      <td>14952.0195</td>
+      <td>19974.6191</td>
+      <td>7142.7998</td>
+      <td>2271.7200</td>
+      <td>24099.6992</td>
+      <td>5487.4399</td>
+      <td>19494.5293</td>
+    </tr>
+    <tr>
+      <th>2017-12-31 00:00:00+00:00</th>
+      <td>19732.4004</td>
+      <td>7099.2002</td>
+      <td>2257.8301</td>
+      <td>22134.4707</td>
+      <td>5429.0801</td>
+      <td>18335.6309</td>
+      <td>24837.5098</td>
+      <td>7687.7998</td>
+      <td>2690.1599</td>
+      <td>30003.4902</td>
+      <td>6994.7598</td>
+      <td>22939.1797</td>
+    </tr>
+    <tr>
+      <th>2018-12-31 00:00:00+00:00</th>
+      <td>21792.1992</td>
+      <td>6584.7002</td>
+      <td>2351.1001</td>
+      <td>24585.5293</td>
+      <td>6192.9199</td>
+      <td>19155.7402</td>
+      <td>26828.3906</td>
+      <td>7877.5000</td>
+      <td>2930.7500</td>
+      <td>33154.1211</td>
+      <td>8109.6899</td>
+      <td>24270.6191</td>
+    </tr>
+    <tr>
+      <th>2019-12-31 00:00:00+00:00</th>
+      <td>22686.2207</td>
+      <td>6692.7002</td>
+      <td>2447.8899</td>
+      <td>25064.3594</td>
+      <td>6463.5000</td>
+      <td>19561.9609</td>
+      <td>28645.2598</td>
+      <td>7686.6001</td>
+      <td>3240.0200</td>
+      <td>30157.4902</td>
+      <td>9022.3896</td>
+      <td>24066.1191</td>
+    </tr>
+    <tr>
+      <th>2020-12-31 00:00:00+00:00</th>
+      <td>18591.9297</td>
+      <td>4993.8999</td>
+      <td>2237.3999</td>
+      <td>21696.1309</td>
+      <td>6860.6699</td>
+      <td>16552.8301</td>
+      <td>30606.4805</td>
+      <td>7674.6001</td>
+      <td>3756.0701</td>
+      <td>29056.4199</td>
+      <td>12899.4199</td>
+      <td>27568.1504</td>
+    </tr>
+    <tr>
+      <th>2021-12-31 00:00:00+00:00</th>
+      <td>29982.6191</td>
+      <td>6407.5000</td>
+      <td>3700.6499</td>
+      <td>22744.8594</td>
+      <td>12609.1602</td>
+      <td>27013.2500</td>
+      <td>36488.6289</td>
+      <td>7420.7002</td>
+      <td>4793.0601</td>
+      <td>31084.9395</td>
+      <td>16057.4404</td>
+      <td>30670.0996</td>
+    </tr>
+    <tr>
+      <th>2022-12-31 00:00:00+00:00</th>
+      <td>28725.5098</td>
+      <td>6826.2002</td>
+      <td>3577.0300</td>
+      <td>14687.0195</td>
+      <td>10213.2900</td>
+      <td>24717.5293</td>
+      <td>36799.6484</td>
+      <td>7672.3999</td>
+      <td>4796.5601</td>
+      <td>24965.5508</td>
+      <td>15832.7998</td>
+      <td>29332.1602</td>
+    </tr>
+    <tr>
+      <th>2023-12-31 00:00:00+00:00</th>
+      <td>32930.0781</td>
+      <td>7554.1001</td>
+      <td>3808.1001</td>
+      <td>20145.2891</td>
+      <td>10305.2402</td>
+      <td>25716.8594</td>
+      <td>34302.6094</td>
+      <td>8014.2998</td>
+      <td>4179.7598</td>
+      <td>22688.9004</td>
+      <td>12200.8203</td>
+      <td>27696.4395</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="calulate-the-mean-and-standard-deviation-of-returns-by-ticker-for-the-matana-msft-aapl-tsla-amzn-nvda-and-goog-stocks">
+<h3>Calulate the mean and standard deviation of returns by ticker for the MATANA (MSFT, AAPL, TSLA, AMZN, NVDA, and GOOG) stocks<a class="headerlink" href="#calulate-the-mean-and-standard-deviation-of-returns-by-ticker-for-the-matana-msft-aapl-tsla-amzn-nvda-and-goog-stocks" title="Permalink to this heading">#</a></h3>
+<p>Consider only dates with complete returns data.
+Try this calculation with wide and long data frames, and confirm your results are the same.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">matana</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">yf</span><span class="o">.</span><span class="n">Tickers</span><span class="p">(</span><span class="n">tickers</span><span class="o">=</span><span class="s1">&#39;MSFT AAPL TSLA AMZN NVDA GOOG&#39;</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="n">session</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">history</span><span class="p">(</span><span class="n">period</span><span class="o">=</span><span class="s1">&#39;max&#39;</span><span class="p">,</span> <span class="n">auto_adjust</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">progress</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">rename_axis</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Variable&#39;</span><span class="p">,</span> <span class="s1">&#39;Ticker&#39;</span><span class="p">])</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">returns</span> <span class="o">=</span> <span class="n">matana</span><span class="p">[</span><span class="s1">&#39;Adj Close&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">pct_change</span><span class="p">()</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">returns</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="s1">&#39;std&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Ticker</th>
+      <th>AAPL</th>
+      <th>AMZN</th>
+      <th>GOOG</th>
+      <th>MSFT</th>
+      <th>NVDA</th>
+      <th>TSLA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>mean</th>
+      <td>0.0011</td>
+      <td>0.0011</td>
+      <td>0.0008</td>
+      <td>0.0010</td>
+      <td>0.0018</td>
+      <td>0.0022</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>0.0180</td>
+      <td>0.0208</td>
+      <td>0.0172</td>
+      <td>0.0165</td>
+      <td>0.0281</td>
+      <td>0.0362</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">returns</span><span class="o">.</span><span class="n">stack</span><span class="p">()</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Ticker&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="s1">&#39;std&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">T</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Ticker</th>
+      <th>AAPL</th>
+      <th>AMZN</th>
+      <th>GOOG</th>
+      <th>MSFT</th>
+      <th>NVDA</th>
+      <th>TSLA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>mean</th>
+      <td>0.0011</td>
+      <td>0.0011</td>
+      <td>0.0008</td>
+      <td>0.0010</td>
+      <td>0.0018</td>
+      <td>0.0022</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>0.0180</td>
+      <td>0.0208</td>
+      <td>0.0172</td>
+      <td>0.0165</td>
+      <td>0.0281</td>
+      <td>0.0362</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span>
+    <span class="n">returns</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="s1">&#39;std&#39;</span><span class="p">]),</span>
+    <span class="n">returns</span><span class="o">.</span><span class="n">stack</span><span class="p">()</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Ticker&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="s1">&#39;std&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">T</span>    
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="calculate-the-mean-and-standard-deviation-of-returns-and-the-maximum-of-closing-prices-by-ticker-for-the-matana-stocks">
+<h3>Calculate the mean and standard deviation of returns and the maximum of closing prices by ticker for the MATANA stocks<a class="headerlink" href="#calculate-the-mean-and-standard-deviation-of-returns-and-the-maximum-of-closing-prices-by-ticker-for-the-matana-stocks" title="Permalink to this heading">#</a></h3>
+<p>Again, consider only dates with complete returns data.
+Try this calculation with wide and long data frames, and confirm your results are the same.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">_</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">MultiIndex</span><span class="o">.</span><span class="n">from_product</span><span class="p">([[</span><span class="s1">&#39;Returns&#39;</span><span class="p">],</span> <span class="n">matana</span><span class="p">[</span><span class="s1">&#39;Adj Close&#39;</span><span class="p">]])</span>
+<span class="n">matana</span><span class="p">[</span><span class="n">_</span><span class="p">]</span> <span class="o">=</span> <span class="n">matana</span><span class="p">[</span><span class="s1">&#39;Adj Close&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">pct_change</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">matana</span>
+    <span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">returns</span><span class="o">.</span><span class="n">index</span><span class="p">]</span>
+    <span class="o">.</span><span class="n">stack</span><span class="p">()</span>
+    <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Ticker&#39;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s1">&#39;Returns&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="s1">&#39;std&#39;</span><span class="p">],</span> <span class="s1">&#39;Close&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;max&#39;</span><span class="p">]})</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+
+    .dataframe thead tr:last-of-type th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th>Variable</th>
+      <th colspan="2" halign="left">Returns</th>
+      <th>Close</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>mean</th>
+      <th>std</th>
+      <th>max</th>
+    </tr>
+    <tr>
+      <th>Ticker</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>AAPL</th>
+      <td>0.0011</td>
+      <td>0.0180</td>
+      <td>182.0100</td>
+    </tr>
+    <tr>
+      <th>AMZN</th>
+      <td>0.0011</td>
+      <td>0.0208</td>
+      <td>186.5705</td>
+    </tr>
+    <tr>
+      <th>GOOG</th>
+      <td>0.0008</td>
+      <td>0.0172</td>
+      <td>150.7090</td>
+    </tr>
+    <tr>
+      <th>MSFT</th>
+      <td>0.0010</td>
+      <td>0.0165</td>
+      <td>343.1100</td>
+    </tr>
+    <tr>
+      <th>NVDA</th>
+      <td>0.0018</td>
+      <td>0.0281</td>
+      <td>333.7600</td>
+    </tr>
+    <tr>
+      <th>TSLA</th>
+      <td>0.0022</td>
+      <td>0.0362</td>
+      <td>409.9700</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="calculate-monthly-means-and-volatilities-for-spy-and-goog-returns">
+<h3>Calculate monthly means and volatilities for SPY and GOOG returns<a class="headerlink" href="#calculate-monthly-means-and-volatilities-for-spy-and-goog-returns" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spy_goog</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">yf</span><span class="o">.</span><span class="n">Tickers</span><span class="p">(</span><span class="n">tickers</span><span class="o">=</span><span class="s1">&#39;SPY GOOG&#39;</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="n">session</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">history</span><span class="p">(</span><span class="n">period</span><span class="o">=</span><span class="s1">&#39;max&#39;</span><span class="p">,</span> <span class="n">auto_adjust</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">progress</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">rename_axis</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Variable&#39;</span><span class="p">,</span> <span class="s1">&#39;Ticker&#39;</span><span class="p">])</span>
+<span class="p">)</span>
+
+<span class="n">spy_goog</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+
+    .dataframe thead tr:last-of-type th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th>Variable</th>
+      <th colspan="2" halign="left">Adj Close</th>
+      <th>Capital Gains</th>
+      <th colspan="2" halign="left">Close</th>
+      <th colspan="2" halign="left">Dividends</th>
+      <th colspan="2" halign="left">High</th>
+      <th colspan="2" halign="left">Low</th>
+      <th colspan="2" halign="left">Open</th>
+      <th colspan="2" halign="left">Stock Splits</th>
+      <th colspan="2" halign="left">Volume</th>
+    </tr>
+    <tr>
+      <th>Ticker</th>
+      <th>GOOG</th>
+      <th>SPY</th>
+      <th>SPY</th>
+      <th>GOOG</th>
+      <th>SPY</th>
+      <th>GOOG</th>
+      <th>SPY</th>
+      <th>GOOG</th>
+      <th>SPY</th>
+      <th>GOOG</th>
+      <th>SPY</th>
+      <th>GOOG</th>
+      <th>SPY</th>
+      <th>GOOG</th>
+      <th>SPY</th>
+      <th>GOOG</th>
+      <th>SPY</th>
+    </tr>
+    <tr>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1993-01-29 00:00:00-05:00</th>
+      <td>NaN</td>
+      <td>25.2182</td>
+      <td>0.0000</td>
+      <td>NaN</td>
+      <td>43.9375</td>
+      <td>NaN</td>
+      <td>0.0000</td>
+      <td>NaN</td>
+      <td>43.9688</td>
+      <td>NaN</td>
+      <td>43.7500</td>
+      <td>NaN</td>
+      <td>43.9688</td>
+      <td>NaN</td>
+      <td>0.0000</td>
+      <td>NaN</td>
+      <td>1003200</td>
+    </tr>
+    <tr>
+      <th>1993-02-01 00:00:00-05:00</th>
+      <td>NaN</td>
+      <td>25.3976</td>
+      <td>0.0000</td>
+      <td>NaN</td>
+      <td>44.2500</td>
+      <td>NaN</td>
+      <td>0.0000</td>
+      <td>NaN</td>
+      <td>44.2500</td>
+      <td>NaN</td>
+      <td>43.9688</td>
+      <td>NaN</td>
+      <td>43.9688</td>
+      <td>NaN</td>
+      <td>0.0000</td>
+      <td>NaN</td>
+      <td>480500</td>
+    </tr>
+    <tr>
+      <th>1993-02-02 00:00:00-05:00</th>
+      <td>NaN</td>
+      <td>25.4514</td>
+      <td>0.0000</td>
+      <td>NaN</td>
+      <td>44.3438</td>
+      <td>NaN</td>
+      <td>0.0000</td>
+      <td>NaN</td>
+      <td>44.3750</td>
+      <td>NaN</td>
+      <td>44.1250</td>
+      <td>NaN</td>
+      <td>44.2188</td>
+      <td>NaN</td>
+      <td>0.0000</td>
+      <td>NaN</td>
+      <td>201300</td>
+    </tr>
+    <tr>
+      <th>1993-02-03 00:00:00-05:00</th>
+      <td>NaN</td>
+      <td>25.7204</td>
+      <td>0.0000</td>
+      <td>NaN</td>
+      <td>44.8125</td>
+      <td>NaN</td>
+      <td>0.0000</td>
+      <td>NaN</td>
+      <td>44.8438</td>
+      <td>NaN</td>
+      <td>44.3750</td>
+      <td>NaN</td>
+      <td>44.4062</td>
+      <td>NaN</td>
+      <td>0.0000</td>
+      <td>NaN</td>
+      <td>529400</td>
+    </tr>
+    <tr>
+      <th>1993-02-04 00:00:00-05:00</th>
+      <td>NaN</td>
+      <td>25.8280</td>
+      <td>0.0000</td>
+      <td>NaN</td>
+      <td>45.0000</td>
+      <td>NaN</td>
+      <td>0.0000</td>
+      <td>NaN</td>
+      <td>45.0938</td>
+      <td>NaN</td>
+      <td>44.4688</td>
+      <td>NaN</td>
+      <td>44.9688</td>
+      <td>NaN</td>
+      <td>0.0000</td>
+      <td>NaN</td>
+      <td>531500</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spy_goog_m</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">spy_goog</span>
+    <span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;1993-02&#39;</span><span class="p">:</span><span class="s1">&#39;2023-01&#39;</span><span class="p">,</span> <span class="s1">&#39;Adj Close&#39;</span><span class="p">]</span>
+    <span class="o">.</span><span class="n">pct_change</span><span class="p">()</span>
+    <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Grouper</span><span class="p">(</span><span class="n">freq</span><span class="o">=</span><span class="s1">&#39;M&#39;</span><span class="p">))</span>
+    <span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="s1">&#39;std&#39;</span><span class="p">])</span>
+<span class="p">)</span>
+
+<span class="n">spy_goog_m</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+
+    .dataframe thead tr:last-of-type th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th>Ticker</th>
+      <th colspan="2" halign="left">GOOG</th>
+      <th colspan="2" halign="left">SPY</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>mean</th>
+      <th>std</th>
+      <th>mean</th>
+      <th>std</th>
+    </tr>
+    <tr>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1993-02-28 00:00:00-05:00</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.0002</td>
+      <td>0.0081</td>
+    </tr>
+    <tr>
+      <th>1993-03-31 00:00:00-05:00</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.0010</td>
+      <td>0.0071</td>
+    </tr>
+    <tr>
+      <th>1993-04-30 00:00:00-04:00</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>-0.0012</td>
+      <td>0.0074</td>
+    </tr>
+    <tr>
+      <th>1993-05-31 00:00:00-04:00</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.0014</td>
+      <td>0.0071</td>
+    </tr>
+    <tr>
+      <th>1993-06-30 00:00:00-04:00</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.0002</td>
+      <td>0.0060</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2022-09-30 00:00:00-04:00</th>
+      <td>-0.0058</td>
+      <td>0.0198</td>
+      <td>-0.0045</td>
+      <td>0.0151</td>
+    </tr>
+    <tr>
+      <th>2022-10-31 00:00:00-04:00</th>
+      <td>-0.0003</td>
+      <td>0.0300</td>
+      <td>0.0039</td>
+      <td>0.0176</td>
+    </tr>
+    <tr>
+      <th>2022-11-30 00:00:00-05:00</th>
+      <td>0.0038</td>
+      <td>0.0316</td>
+      <td>0.0027</td>
+      <td>0.0176</td>
+    </tr>
+    <tr>
+      <th>2022-12-31 00:00:00-05:00</th>
+      <td>-0.0062</td>
+      <td>0.0173</td>
+      <td>-0.0028</td>
+      <td>0.0113</td>
+    </tr>
+    <tr>
+      <th>2023-01-31 00:00:00-05:00</th>
+      <td>0.0061</td>
+      <td>0.0216</td>
+      <td>0.0031</td>
+      <td>0.0105</td>
+    </tr>
+  </tbody>
+</table>
+<p>360 rows × 4 columns</p>
+</div></div></div>
+</div>
+</section>
+<section id="plot-the-monthly-means-and-volatilities-from-the-previous-exercise">
+<h3>Plot the monthly means and volatilities from the previous exercise<a class="headerlink" href="#plot-the-monthly-means-and-volatilities-from-the-previous-exercise" title="Permalink to this heading">#</a></h3>
+<p>Here is a first go!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spy_goog_m</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">subplots</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&lt;AxesSubplot:xlabel=&#39;Date&#39;&gt;, &lt;AxesSubplot:xlabel=&#39;Date&#39;&gt;,
+       &lt;AxesSubplot:xlabel=&#39;Date&#39;&gt;, &lt;AxesSubplot:xlabel=&#39;Date&#39;&gt;],
+      dtype=object)
+</pre></div>
+</div>
+<img alt="_images/57ce4aabcb7cfc753ea0f95ee6806e0dbb999e12ffb4af1fd46c7047a562fb1a.png" src="_images/57ce4aabcb7cfc753ea0f95ee6806e0dbb999e12ffb4af1fd46c7047a562fb1a.png" />
+</div>
+</div>
+<p>We can use <code class="docutils literal notranslate"><span class="pre">plt.subplots()</span></code> to better organize these plots.
+Here <code class="docutils literal notranslate"><span class="pre">.plt.subplots()</span></code> creates a tuple of empty axes and assign it to <code class="docutils literal notranslate"><span class="pre">ax</span></code>.
+Then we can use the <code class="docutils literal notranslate"><span class="pre">ax=</span></code> argument to assign each plot to each axes.
+I suggest ou pick up these tricks as you go instead of trying to read and memorize the matplotlib manual before you have a very specific task as hand.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">spy_goog_m</span><span class="o">.</span><span class="n">swaplevel</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)[</span><span class="s1">&#39;mean&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mul</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Mean of Daily Returns (%)&#39;</span><span class="p">)</span>
+<span class="n">spy_goog_m</span><span class="o">.</span><span class="n">swaplevel</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)[</span><span class="s1">&#39;std&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mul</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;SD of Daily Returns (%)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;Means and Standard Deviations of Daily Returns&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/868bfa68c2f523b4db7ae547dfdcbc018f186587bcb1c9775c41bed5d95a5395.png" src="_images/868bfa68c2f523b4db7ae547dfdcbc018f186587bcb1c9775c41bed5d95a5395.png" />
+</div>
+</div>
+</section>
+<section id="assign-the-dow-jones-stocks-to-five-portfolios-based-on-their-monthly-volatility">
+<h3>Assign the Dow Jones stocks to five portfolios based on their monthly volatility<a class="headerlink" href="#assign-the-dow-jones-stocks-to-five-portfolios-based-on-their-monthly-volatility" title="Permalink to this heading">#</a></h3>
+<p>First, we need to download Dow Jones stock data and calculate daily returns.
+Use data from 2020 through today.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wiki</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="s1">&#39;https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dj</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">yf</span><span class="o">.</span><span class="n">Tickers</span><span class="p">(</span><span class="n">tickers</span><span class="o">=</span><span class="n">wiki</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s1">&#39;Symbol&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_list</span><span class="p">(),</span> <span class="n">session</span><span class="o">=</span><span class="n">session</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">history</span><span class="p">(</span><span class="n">period</span><span class="o">=</span><span class="s1">&#39;max&#39;</span><span class="p">,</span> <span class="n">auto_adjust</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">progress</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">rename_axis</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Variable&#39;</span><span class="p">,</span> <span class="s1">&#39;Ticker&#39;</span><span class="p">])</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here I add daily returns.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">_</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">MultiIndex</span><span class="o">.</span><span class="n">from_product</span><span class="p">([[</span><span class="s1">&#39;Returns&#39;</span><span class="p">],</span> <span class="n">dj</span><span class="p">[</span><span class="s1">&#39;Adj Close&#39;</span><span class="p">]])</span>
+<span class="n">dj</span><span class="p">[</span><span class="n">_</span><span class="p">]</span> <span class="o">=</span> <span class="n">dj</span><span class="p">[</span><span class="s1">&#39;Adj Close&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">pct_change</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here I add the monthly volatility to all the days in each month for each ticker.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">_</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">MultiIndex</span><span class="o">.</span><span class="n">from_product</span><span class="p">([[</span><span class="s1">&#39;Volatility&#39;</span><span class="p">],</span> <span class="n">dj</span><span class="p">[</span><span class="s1">&#39;Returns&#39;</span><span class="p">]])</span>
+<span class="n">dj</span><span class="p">[</span><span class="n">_</span><span class="p">]</span> <span class="o">=</span> <span class="n">dj</span><span class="p">[</span><span class="s1">&#39;Returns&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Grouper</span><span class="p">(</span><span class="n">freq</span><span class="o">=</span><span class="s1">&#39;M&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="s1">&#39;std&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here I assign stocks to portfolios based on their volatility.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">+</span> <span class="n">pd</span><span class="o">.</span><span class="n">qcut</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="n">q</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 1, 2, 2, 3, 3, 4, 4, 5, 5])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">_</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">MultiIndex</span><span class="o">.</span><span class="n">from_product</span><span class="p">([[</span><span class="s1">&#39;Portfolio&#39;</span><span class="p">],</span> <span class="n">dj</span><span class="p">[</span><span class="s1">&#39;Volatility&#39;</span><span class="p">]])</span>
+<span class="n">dj</span><span class="p">[</span><span class="n">_</span><span class="p">]</span> <span class="o">=</span> <span class="n">dj</span><span class="p">[</span><span class="s1">&#39;Volatility&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">qcut</span><span class="p">,</span> <span class="n">q</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="plot-the-time-series-volatilities-of-these-five-portfolios">
+<h3>Plot the time-series volatilities of these five portfolios<a class="headerlink" href="#plot-the-time-series-volatilities-of-these-five-portfolios" title="Permalink to this heading">#</a></h3>
+<p>How do these portfolio volatilies compare to (1) each other and (2) the mean volatility of their constituent stocks?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">dj</span>
+    <span class="o">.</span><span class="n">stack</span><span class="p">()</span>
+    <span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Date&#39;</span><span class="p">,</span> <span class="s1">&#39;Portfolio&#39;</span><span class="p">])</span>
+    <span class="p">[</span><span class="s1">&#39;Returns&#39;</span><span class="p">]</span>
+    <span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="s1">&#39;Portfolio&#39;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="n">pd</span><span class="o">.</span><span class="n">Grouper</span><span class="p">(</span><span class="n">freq</span><span class="o">=</span><span class="s1">&#39;M&#39;</span><span class="p">),</span> <span class="s1">&#39;Portfolio&#39;</span><span class="p">])</span>
+    <span class="o">.</span><span class="n">std</span><span class="p">()</span>
+    <span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Returns&#39;</span><span class="p">:</span> <span class="s1">&#39;Volatility&#39;</span><span class="p">})</span>
+    <span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="s1">&#39;Portfolio&#39;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">dropna</span><span class="p">()</span> <span class="c1"># drop missing port.</span>
+    <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Portfolio</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;Portfolio&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">))</span> <span class="c1"># w/o missing portf., can convert to integer</span>
+    <span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;Portfolio&#39;</span><span class="p">,</span> <span class="n">append</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">unstack</span><span class="p">()</span>
+    <span class="p">[</span><span class="s1">&#39;Volatility&#39;</span><span class="p">]</span>
+    <span class="o">.</span><span class="n">mul</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Volatility of Daily Returns (%)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Volatility of Five Portfolios Formed on Volatility&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/66a0cea06b6089c3a7fc11433679caabe29ea557c14803edaa812da94ebaefb1.png" src="_images/66a0cea06b6089c3a7fc11433679caabe29ea557c14803edaa812da94ebaefb1.png" />
+</div>
+</div>
+</section>
+<section id="calculate-the-mean-monthly-correlation-between-the-dow-jones-stocks">
+<h3>Calculate the <em>mean</em> monthly correlation between the Dow Jones stocks<a class="headerlink" href="#calculate-the-mean-monthly-correlation-between-the-dow-jones-stocks" title="Permalink to this heading">#</a></h3>
+<p>Drop duplicate correlations and self correlations (i.e., correlation between AAPL and AAPL), which are 1, by definition.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mu_rho</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">rhos</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+    <span class="n">tril</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tril</span><span class="p">(</span><span class="n">rhos</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">nanmean</span><span class="p">(</span><span class="n">rhos</span><span class="o">.</span><span class="n">values</span><span class="p">[(</span><span class="n">tril</span> <span class="o">!=</span> <span class="mf">0.</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">tril</span> <span class="o">!=</span> <span class="mf">1.</span><span class="p">)])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">dj</span>
+    <span class="p">[</span><span class="s1">&#39;Returns&#39;</span><span class="p">]</span>
+    <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Grouper</span><span class="p">(</span><span class="n">freq</span><span class="o">=</span><span class="s1">&#39;Q&#39;</span><span class="p">))</span>
+    <span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">mu_rho</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Mean Correlation&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Mean Correlations of Dow-Jones Stocks&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/2a3e82ea052ce3d0d0c56a8fa05c20dd36cd1b32d8f92a60cf56a84d4aaa9006.png" src="_images/2a3e82ea052ce3d0d0c56a8fa05c20dd36cd1b32d8f92a60cf56a84d4aaa9006.png" />
+</div>
+</div>
+</section>
+<section id="is-market-volatility-higher-during-wars">
+<h3>Is market volatility higher during wars?<a class="headerlink" href="#is-market-volatility-higher-during-wars" title="Permalink to this heading">#</a></h3>
+<p>Here is some guidance:</p>
+<ol class="arabic simple">
+<li><p>Download the daily factor data from Ken French’s website</p></li>
+<li><p>Calculate daily market returns by summing the market risk premium and risk-free rates (<code class="docutils literal notranslate"><span class="pre">Mkt-RF</span></code> and <code class="docutils literal notranslate"><span class="pre">RF</span></code>, respectively)</p></li>
+<li><p>Calculate the volatility (standard deviation) of daily returns <em>every month</em> by combining <code class="docutils literal notranslate"><span class="pre">pd.Grouper()</span></code> and <code class="docutils literal notranslate"><span class="pre">.groupby()</span></code>)</p></li>
+<li><p>Multiply by $\sqrt{252}$ to annualize these volatilities of daily returns</p></li>
+<li><p>Plot these annualized volatilities</p></li>
+</ol>
+<p>Is market volatility higher during wars?
+Consider the following dates:</p>
+<ol class="arabic simple">
+<li><p>WWII: December 1941 to September 1945</p></li>
+<li><p>Korean War: 1950 to 1953</p></li>
+<li><p>Viet Nam War: 1959 to 1975</p></li>
+<li><p>Gulf War: 1990 to 1991</p></li>
+<li><p>War in Afghanistan: 2001 to 2021</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas_datareader</span> <span class="k">as</span> <span class="nn">pdr</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pdr</span><span class="o">.</span><span class="n">famafrench</span><span class="o">.</span><span class="n">get_available_datasets</span><span class="p">()[:</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;F-F_Research_Data_Factors&#39;,
+ &#39;F-F_Research_Data_Factors_weekly&#39;,
+ &#39;F-F_Research_Data_Factors_daily&#39;,
+ &#39;F-F_Research_Data_5_Factors_2x3&#39;,
+ &#39;F-F_Research_Data_5_Factors_2x3_daily&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ff_all</span> <span class="o">=</span> <span class="n">pdr</span><span class="o">.</span><span class="n">DataReader</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;F-F_Research_Data_Factors_daily&#39;</span><span class="p">,</span>
+    <span class="n">data_source</span><span class="o">=</span><span class="s1">&#39;famafrench&#39;</span><span class="p">,</span>
+    <span class="n">start</span><span class="o">=</span><span class="s1">&#39;1900&#39;</span><span class="p">,</span>
+    <span class="n">session</span><span class="o">=</span><span class="n">session</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">ff_all</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Mkt</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;Mkt-RF&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;RF&#39;</span><span class="p">])</span>
+    <span class="p">[</span><span class="s1">&#39;Mkt&#39;</span><span class="p">]</span>
+    <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Grouper</span><span class="p">(</span><span class="n">freq</span><span class="o">=</span><span class="s1">&#39;M&#39;</span><span class="p">))</span>
+    <span class="o">.</span><span class="n">std</span><span class="p">()</span>
+    <span class="o">.</span><span class="n">mul</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">252</span><span class="p">))</span>
+    <span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="p">)</span>
+
+<span class="c1"># adds vertical bands for U.S. wars</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvspan</span><span class="p">(</span><span class="s1">&#39;1941-12&#39;</span><span class="p">,</span> <span class="s1">&#39;1945-09&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;WWII&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;1941-12&#39;</span><span class="p">,</span> <span class="mi">90</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvspan</span><span class="p">(</span><span class="s1">&#39;1950&#39;</span><span class="p">,</span> <span class="s1">&#39;1953&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;Korean&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;1950&#39;</span><span class="p">,</span> <span class="mi">80</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvspan</span><span class="p">(</span><span class="s1">&#39;1959&#39;</span><span class="p">,</span> <span class="s1">&#39;1975&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;Vietnam&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;1959&#39;</span><span class="p">,</span> <span class="mi">90</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvspan</span><span class="p">(</span><span class="s1">&#39;1990&#39;</span><span class="p">,</span> <span class="s1">&#39;1991&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;Gulf I&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;1990&#39;</span><span class="p">,</span> <span class="mi">80</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvspan</span><span class="p">(</span><span class="s1">&#39;2001&#39;</span><span class="p">,</span> <span class="s1">&#39;2021&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;Afghanistan&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;2001&#39;</span><span class="p">,</span> <span class="mi">90</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Annualized Volatility of Daily Returns (%)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Volatility of U.S. Market&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/5cd98e18bb8a9624d0b83e25c2c67f24eb070943b5d8d7e8d624d2b17bec4673.png" src="_images/5cd98e18bb8a9624d0b83e25c2c67f24eb070943b5d8d7e8d624d2b17bec4673.png" />
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="mckinney_10_practice.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">McKinney Chapter 10 - Practice (Blank)</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="mckinney_11_lecture.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">McKinney Chapter 11 - Time Series</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#announcements">Announcements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practice">Practice</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#replicate-the-following-pivot-table-output-with-groupby">Replicate the following <code class="docutils literal notranslate"><span class="pre">.pivot_table()</span></code> output with <code class="docutils literal notranslate"><span class="pre">.groupby()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calulate-the-mean-and-standard-deviation-of-returns-by-ticker-for-the-matana-msft-aapl-tsla-amzn-nvda-and-goog-stocks">Calulate the mean and standard deviation of returns by ticker for the MATANA (MSFT, AAPL, TSLA, AMZN, NVDA, and GOOG) stocks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-the-mean-and-standard-deviation-of-returns-and-the-maximum-of-closing-prices-by-ticker-for-the-matana-stocks">Calculate the mean and standard deviation of returns and the maximum of closing prices by ticker for the MATANA stocks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-monthly-means-and-volatilities-for-spy-and-goog-returns">Calculate monthly means and volatilities for SPY and GOOG returns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-the-monthly-means-and-volatilities-from-the-previous-exercise">Plot the monthly means and volatilities from the previous exercise</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assign-the-dow-jones-stocks-to-five-portfolios-based-on-their-monthly-volatility">Assign the Dow Jones stocks to five portfolios based on their monthly volatility</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-the-time-series-volatilities-of-these-five-portfolios">Plot the time-series volatilities of these five portfolios</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-the-mean-monthly-correlation-between-the-dow-jones-stocks">Calculate the <em>mean</em> monthly correlation between the Dow Jones stocks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#is-market-volatility-higher-during-wars">Is market volatility higher during wars?</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Richard Herron
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

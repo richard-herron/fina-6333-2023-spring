@@ -1,0 +1,80 @@
+Traceback (most recent call last):
+  File "/home/richard/anaconda3/envs/fina-6333/lib/python3.9/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/home/richard/anaconda3/envs/fina-6333/lib/python3.9/site-packages/nbclient/client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/home/richard/anaconda3/envs/fina-6333/lib/python3.9/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/home/richard/anaconda3/envs/fina-6333/lib/python3.9/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/home/richard/anaconda3/envs/fina-6333/lib/python3.9/asyncio/base_events.py", line 647, in run_until_complete
+    return future.result()
+  File "/home/richard/anaconda3/envs/fina-6333/lib/python3.9/site-packages/nbclient/client.py", line 663, in async_execute
+    await self.async_execute_cell(
+  File "/home/richard/anaconda3/envs/fina-6333/lib/python3.9/site-packages/nbclient/client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/richard/anaconda3/envs/fina-6333/lib/python3.9/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+surprises_2 = (
+    pd.merge_asof(
+        left=earnings_2.sort_index(level=['Date', 'Ticker']),
+        right=returns_2.stack().to_frame('Returns').swaplevel().sort_index(level=['Date', 'Ticker']),
+        on='Date',
+        by='Ticker',
+        direction='forward',
+        allow_exact_matches=False
+    )
+    .dropna()
+    .set_index(['Date', 'Ticker'])
+)
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mMergeError[0m                                Traceback (most recent call last)
+[0;32m/tmp/ipykernel_115959/2062415977.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      1[0m surprises_2 = (
+[0;32m----> 2[0;31m     pd.merge_asof(
+[0m[1;32m      3[0m         [0mleft[0m[0;34m=[0m[0mearnings_2[0m[0;34m.[0m[0msort_index[0m[0;34m([0m[0mlevel[0m[0;34m=[0m[0;34m[[0m[0;34m'Date'[0m[0;34m,[0m [0;34m'Ticker'[0m[0;34m][0m[0;34m)[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      4[0m         [0mright[0m[0;34m=[0m[0mreturns_2[0m[0;34m.[0m[0mstack[0m[0;34m([0m[0;34m)[0m[0;34m.[0m[0mto_frame[0m[0;34m([0m[0;34m'Returns'[0m[0;34m)[0m[0;34m.[0m[0mswaplevel[0m[0;34m([0m[0;34m)[0m[0;34m.[0m[0msort_index[0m[0;34m([0m[0mlevel[0m[0;34m=[0m[0;34m[[0m[0;34m'Date'[0m[0;34m,[0m [0;34m'Ticker'[0m[0;34m][0m[0;34m)[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m         [0mon[0m[0;34m=[0m[0;34m'Date'[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/anaconda3/envs/fina-6333/lib/python3.9/site-packages/pandas/core/reshape/merge.py[0m in [0;36mmerge_asof[0;34m(left, right, on, left_on, right_on, left_index, right_index, by, left_by, right_by, suffixes, tolerance, allow_exact_matches, direction)[0m
+[1;32m    579[0m     [0;36m4[0m [0;36m2016[0m[0;34m-[0m[0;36m0[0m[0;36m5[0m[0;34m-[0m[0;36m25[0m [0;36m13[0m[0;34m:[0m[0;36m30[0m[0;34m:[0m[0;36m00.048[0m   [0mAAPL[0m   [0;36m98.00[0m       [0;36m100[0m     [0mNaN[0m     [0mNaN[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    580[0m     """
+[0;32m--> 581[0;31m     op = _AsOfMerge(
+[0m[1;32m    582[0m         [0mleft[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    583[0m         [0mright[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/anaconda3/envs/fina-6333/lib/python3.9/site-packages/pandas/core/reshape/merge.py[0m in [0;36m__init__[0;34m(self, left, right, on, left_on, right_on, left_index, right_index, by, left_by, right_by, axis, suffixes, copy, fill_method, how, tolerance, allow_exact_matches, direction)[0m
+[1;32m   1742[0m         [0mself[0m[0;34m.[0m[0mdirection[0m [0;34m=[0m [0mdirection[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1743[0m [0;34m[0m[0m
+[0;32m-> 1744[0;31m         _OrderedMerge.__init__(
+[0m[1;32m   1745[0m             [0mself[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1746[0m             [0mleft[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/anaconda3/envs/fina-6333/lib/python3.9/site-packages/pandas/core/reshape/merge.py[0m in [0;36m__init__[0;34m(self, left, right, on, left_on, right_on, left_index, right_index, axis, suffixes, copy, fill_method, how)[0m
+[1;32m   1628[0m [0;34m[0m[0m
+[1;32m   1629[0m         [0mself[0m[0;34m.[0m[0mfill_method[0m [0;34m=[0m [0mfill_method[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 1630[0;31m         _MergeOperation.__init__(
+[0m[1;32m   1631[0m             [0mself[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1632[0m             [0mleft[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/anaconda3/envs/fina-6333/lib/python3.9/site-packages/pandas/core/reshape/merge.py[0m in [0;36m__init__[0;34m(self, left, right, how, on, left_on, right_on, axis, left_index, right_index, sort, suffixes, copy, indicator, validate)[0m
+[1;32m    698[0m             [0mself[0m[0;34m.[0m[0mright_join_keys[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    699[0m             [0mself[0m[0;34m.[0m[0mjoin_names[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 700[0;31m         ) = self._get_merge_keys()
+[0m[1;32m    701[0m [0;34m[0m[0m
+[1;32m    702[0m         [0;31m# validate the merge keys dtypes. We may need to coerce[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/anaconda3/envs/fina-6333/lib/python3.9/site-packages/pandas/core/reshape/merge.py[0m in [0;36m_get_merge_keys[0;34m(self)[0m
+[1;32m   1860[0m                         [0;34mf"{repr(rk.dtype)}, must be the same type"[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1861[0m                     )
+[0;32m-> 1862[0;31m                 [0;32mraise[0m [0mMergeError[0m[0;34m([0m[0mmsg[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   1863[0m [0;34m[0m[0m
+[1;32m   1864[0m         [0;31m# validate tolerance; datetime.timedelta or Timedelta if we have a DTI[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mMergeError[0m: incompatible merge keys [1] datetime64[ns, America/New_York] and dtype('<M8[ns]'), must be the same type
+MergeError: incompatible merge keys [1] datetime64[ns, America/New_York] and dtype('<M8[ns]'), must be the same type
+
